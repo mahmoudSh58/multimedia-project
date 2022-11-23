@@ -1,0 +1,125 @@
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* header */
+.header .container {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container img {
+    width: 163px;
+    height: 56px;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.links ul li {
+    text-decoration: none;
+    padding-left: 70px;
+}
+
+.links ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.header .links ul li:first-child,
+.header .links ul li:nth-child(2) {
+    position: relative;
+}
+
+.header .links ul li:first-child ul,
+.header .links ul li:nth-child(2) ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #f6f6f6;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 100;
+}
+
+.header .links ul li:hover .header-li {
+    transform: translateY(-4px);
+    transition: transform 0.2s;
+    color: #dfa700;
+}
+
+.header .links ul li:first-child:hover ul,
+.header .links ul li:nth-child(2):hover ul {
+    display: block;
+}
+
+.header .links ul li:first-child ul::before,
+.header .links ul li:nth-child(2) ul::before {
+    width: 0;
+    height: 0;
+    content: '';
+    border: 10px solid #f6f6f6;
+    border-color: transparent transparent #f6f6f6 transparent;
+    right: 5px;
+    top: -20px;
+    position: absolute;
+}
+
+.header .links ul li:first-child ul li,
+.header .links ul li:nth-child(2) ul li {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.header .links ul li:first-child ul li a:hover,
+.header .links ul li:nth-child(2) ul li a:hover {
+    padding-left: 25px;
+    transition: 0.3s;
+}
+
+.header .links ul li:first-child ul li:not(:last-child) a,
+.header .links ul li:nth-child(2) ul li:not(:last-child) a {
+    border-bottom: 1px solid #eee;
+}
+
+/* end of header */
+/* landing */
+.landing .container {
+    background-color: #fc3;
+    height: calc(100vh - 60px);
+    position: relative;
+    width: 100%;
+}
+
+.landing .container .bio {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+}
+
+.landing .container .bio p {
+    font-size: 23px;
+}
+
+.landing .container .bio h1 {
+    margin: 0;
+    font-size: 44px;
+}
+
+/* end landing */
