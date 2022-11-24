@@ -62,7 +62,7 @@ body {
     background-color: #f6f6f6;
     right: 0;
     min-width: 200px;
-    top: calc(100% + 15px);
+    top: calc(100vh + 15px);
     display: none;
     z-index: 100;
 }
@@ -213,6 +213,10 @@ body {
     .body,
     .footer {
         width: 992px;
+    }
+
+    .body .container {
+        height: calc(137vh - 60px);
     }
 
 }
