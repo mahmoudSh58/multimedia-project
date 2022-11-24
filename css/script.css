@@ -2,7 +2,19 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 /* header */
+.header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    background-color: white;
+}
+
 .header .container {
     margin-left: 30px;
     margin-right: 30px;
@@ -28,7 +40,9 @@
     padding-left: 70px;
 }
 
-.links ul li a {
+.links ul li a,
+.links ul li span {
+    cursor: pointer;
     display: inline-block;
     text-decoration: none;
     color: black;
@@ -99,7 +113,7 @@
 /* end of header */
 /* landing */
 .landing .container {
-    background-color: #fc3;
+    background-image: linear-gradient(45deg, rgb(255, 205, 57), rgb(255, 192, 2));
     height: calc(100vh - 60px);
     position: relative;
     width: 100%;
@@ -123,3 +137,71 @@
 }
 
 /* end landing */
+/* body */
+.body .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.body .container a {
+    width: 280px;
+    height: 270px;
+    background-color: black;
+    border-radius: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fc3;
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.body .container a:hover {
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+
+.body .container a span {
+    width: 280px;
+    text-align: center;
+}
+
+.body .container a i {
+    font-size: 40px;
+}
+
+/* end body */
+/* footer */
+.footer {
+    margin: 0;
+}
+
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100px;
+    background-color: #fc3;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.footer .container p {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.footer .container a {
+    color: black;
+}
+
+/* end footert */
