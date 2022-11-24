@@ -205,3 +205,14 @@ body {
 }
 
 /* end footert */
+
+@media (max-width: 992px) {
+
+    .header,
+    .landing,
+    .body,
+    .footer {
+        width: 992px;
+    }
+
+}
