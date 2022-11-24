@@ -206,7 +206,7 @@ body {
 
 /* end footert */
 
-/* @media (max-width: 992px) {
+@media (max-width: 992px) {
 
     .header,
     .landing,
@@ -219,4 +219,4 @@ body {
         height: calc(137vh - 60px);
     }
 
-} */
+}
