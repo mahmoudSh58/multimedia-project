@@ -204,10 +204,14 @@ body {
     align-items: center;
 }
 
+.next_topic {
+    justify-content: center;
+}
+
 
 .next_lesson div a,
 .next_topic div a,
-next_topic .mid {
+.next_topic .mid {
     border-radius: 10px;
     text-decoration: none;
     color: black;
@@ -217,6 +221,21 @@ next_topic .mid {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.next_topic .next a {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.next_topic .previous a {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.next_topic .mid {
+    border-radius: 0px;
+    width: 150px;
+    height: 50px;
+    background-color: #ffcc33;
 }
 
 .next_lesson .next:hover,
