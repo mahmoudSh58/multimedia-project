@@ -290,8 +290,4 @@ body {
         width: 992px;
     }
 
-    .body .container {
-        height: calc(137vh - 60px);
-    }
-
 }
