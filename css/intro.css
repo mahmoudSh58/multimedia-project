@@ -12,7 +12,7 @@ body {
     top: 0px;
     left: 0px;
     z-index: 100;
-    background-color: #dddddd5e;
+    background-image: linear-gradient(74deg, #dddddd3d 2%, #dddddd);
 }
 
 .header .container {
