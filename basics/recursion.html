@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="css/normalized.css">
+    <link rel="stylesheet" href="css/recursion.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+     <!-- header -->
+     <div class="header">
+        <div class="container">
+            <img src="image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1>Recursion</h1>
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+     <div class="container">
+        <p><strong>Recursion</strong> is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve. The recursion continues until some condition is met.</p>
+        <img src="image/principal.png" alt="principal of recursion">
+        <p class="subtitle">To Write a recursive function, you need to think about two things:</p>
+        <ol>
+            <li><strong>The recursion logic (The transition):</strong> How to get the answer to the current problem from the answer(s) of simpler version(s) of it</li>
+            <li><strong>The base case(s):</strong> When this recursion will end</li>
+        </ol>
+        <img src="image/simple.png" alt="simple-recursion" style="width:30% ;">
+        <p class="subtext">Here, n==0 is the base case that will terminate the iteration of the function when n becomes equal to zero. </p>
+        <p class="subtext">return(n-1) is the recursive function that will help in the repetition of code.
+        </p> 
+        <br>
+        <div class="code1">
+
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="font-size:13.0pt;font-family:&quot;Calibri&quot;,sans-serif;
+            color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="font-size:13.0pt;font-family:&quot;Calibri&quot;,sans-serif;
+            color:#4F6228">#include &lt;bits/<span class="SpellE">stdc</span>++.h&gt;</span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">using namespace std;</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">// factorial of n = 1*2*3<span class="GramE">*..</span>*n</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">int <span class="GramE">factorial(</span>int n)</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">{</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;if(n==1)</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;return n*factorial(n-1);</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">}</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">int <span class="GramE">main(</span>)
+            {</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;int n, result;</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE">cout</span> &lt;&lt; "Enter a non-negative number: ";</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE">cin</span> &gt;&gt; n;</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;result = factorial(n);</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE">cout</span> &lt;&lt; "Factorial of " &lt;&lt; n &lt;&lt;  " = " &lt;&lt; result;</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">&nbsp;&nbsp;&nbsp;&nbsp;return 0;</span></span><span style="color:#4F6228"><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="white-space:pre-wrap"><span style="font-size:
+            13.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#4F6228">}</span><o:p></o:p></span></p>
+            
+            <p style="margin-top:0in;margin-right:0in;margin-bottom:0pt;margin-left:0in;
+            background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            
+            
+        </div>
+        <br>
+        <div class="output1">
+
+            <p class="MsoNormal" style="margin:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt;mso-ansi-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt;mso-ansi-language:EN-GB"><span style="mso-spacerun:yes">&nbsp; </span><span class="GramE">Output :</span></span><span style="font-size:13.5pt;font-family:&quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#948A54;
+            letter-spacing:.1pt;mso-ansi-language:EN-GB">&nbsp;</span><span style="font-size:13.5pt;font-family:&quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt;mso-ansi-language:EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#948A54;letter-spacing:.1pt;mso-ansi-language:EN-GB">Enter a non-negative number: 5<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#948A54;
+            letter-spacing:.1pt;mso-ansi-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Factorial of 5 = 120</span></p>
+            
+            <p class="MsoNormal" style="margin:0in;text-indent:0in;line-height:107%;
+                background:#F2F2F2"><span style="font-size:14.0pt;line-height:107%;color:#948D72"><o:p>&nbsp;</o:p></span></p>
+        </div>
+        <!-- <video src="image/fact-1.mp4" controls></video> -->
+        <img src="image/fact.gif" alt="fact-code-explain">
+        <p class="description"> Factorial of a Number Using Recursion</p>
+        <br>
+        <div class="WordSection1">
+
+
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">#include
+            &lt;bits/<span class="SpellE">stdc</span>++.h&gt;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">using
+            namespace std;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">//In
+            the Fibonacci series, each number is the sum of its previous two numbers.<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">int
+            <span class="GramE">Fibonacci(</span>int n){<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if(n&lt;=1)<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return n;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>return Fibonacci(n-1) + Fibonacci(n-2);<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">}<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">int
+            <span class="GramE">main(</span>) {<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>int n, result;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cout</span> &lt;&lt;
+            "Enter a non-negative number: ";<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cin</span> &gt;&gt; n;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>result = Fibonacci(n);<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cout</span> &lt;&lt;
+            "Fibonacci of " &lt;&lt; n &lt;&lt; " = " &lt;&lt; result;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>return 0;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">}<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <br>
+        <div class="output2">
+
+            <p class="MsoNormal" style="margin-bottom:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Calibri;color:#948A54;letter-spacing:.1pt;mso-ansi-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Calibri;color:#948A54;letter-spacing:.1pt;mso-ansi-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;</span>&nbsp;<span class="GramE">Output :</span></span><span style="mso-ascii-font-family:Calibri;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:#948A54"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0in;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#948A54;
+            letter-spacing:.1pt;mso-ansi-language:EN-GB">&nbsp;</span><span style="mso-ascii-font-family:Calibri;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:#948A54"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#F2F2F2"><span lang="EN-GB" style="font-size:14.0pt;line-height:107%;font-family:&quot;Work Sans&quot;;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-bidi-font-family:Calibri;color:#948A54;letter-spacing:
+            .1pt;mso-ansi-language:EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#948A54">Enter a non-negative number: 5<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fibonacci of 5 = 5<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <img src="image/fibgif.gif" alt="fib-code-explain">
+        <p class="description"> Fibonacci of a Number Using Recursion</p>
+        <br><br>
+        <p class="subtitle">Advantages of C++ Recursion</p>
+        <ul>
+            <li>It makes our code shorter and cleaner.</li>
+            <li>Recursion is required in problems concerning data structures and advanced algorithms, such as Graph and Tree Traversal.</li>
+        </ul>
+        <p class="subtitle">Disadvantages of C++ Recursion</p>
+        <ul>
+            <li>It takes a lot of stack space compared to an iterative program.</li>
+            <li>It uses more processor time.</li>
+            <li>It can be more difficult to debug compared to an equivalent iterative program.</li>
+        </ul>
+        
+        <div style="display:flex;align-items: center;justify-content: center;padding: 20px;">
+            <iframe width=100% height="500" src="https://www.youtube.com/embed/nIqgWLpoX68" title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="topic">
+            <p>Another topic:</p>
+             <ol>
+                <li><a href="https://www.geeksforgeeks.org/introduction-to-backtracking-data-structure-and-algorithm-tutorials/" target="_blank" >Backtracking</a></li>
+            </ol>
+        </div>
+        <div class="problem">
+            <p style="text-align: center;">Problems</p>
+             <ul>
+                <li><a href="https://codeforces.com/group/SNUSTrH81d/contest/328569/problem/A" target="_blank">problem 1</a></li>
+                <li><a href="https://codeforces.com/group/SNUSTrH81d/contest/328569/problem/E" target="_blank">problem 2</a></li>
+            </ul>
+        </div>
+        <div class="next_lesson">
+            <div class="previous"><a href="intro_l1.html">&lt;&lt; previous</a></div>
+            <!-- <div class="next"><a href="">next &gt;&gt;</a></div> -->
+        </div>
+        <div class="next_topic">
+            <div class="previous"><a href="">&lt;&lt; previous</a></div>
+            <div class="mid">topic</div>
+            <div class="next"><a href="">next &gt;&gt;</a></div>
+        </div>
+       
+     </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+        <div class="icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </div>
+</div>
+<!-- end footer -->
+        
+    
+</body>
+</html>
