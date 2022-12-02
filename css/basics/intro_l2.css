@@ -113,7 +113,6 @@ body {
 /* end of header */
 /* landing */
 .landing {
-    position: sticky;
     top: 60px;
     left: 0;
 }
