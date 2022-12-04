@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="utf-8">  
+       <title>Functions</title>  
+       <link rel="stylesheet" href="basics.css">
+    </head>
+    <body>
+  <h1> Functions:</h1>
+   <p> A function is a block of code that performs a specific task. </p>
+   <p> There are two types of function:</p>
+   <p >  1) Standard Library Functions: Predefined in C++<br>
+         2) User-defined Function: Created by users
+     <br>
+     <h1> 1) Standard Library Functions :</h1><br>
+      functions for performing common mathematical calculations, string manipulations, character manipulations, input/output,
+      error checking and many other useful operations.<br>
+      This makes the programmer's job easier, because these functions provide many of the capabilities programmers need.
+        The C++ Standard Library functions are provided as part of the C++ programming environment.
+     <br>
+     <h1>C++ Standard Library header file & Explanation :</h1>
+     <ul>
+        <li><h2>(iostream)<h2></li>
+        Contains function prototypes for the C++ standard input and standard output functions. This header file replaces header file (iostream.h).
+       
+       <li><h2>(iomanip)</h2></li>
+       Contains function prototypes for stream manipulators that format streams of data. This header file replaces header file (iomanip.h).
+    
+       <li><h2>(cmath)</h2></li>
+       Contains function prototypes for math library functions. This header file replaces header file (math.h).
+       <li><h2>(cstdlib)</h2></li>
+
+       Contains function prototypes for conversions of numbers to text, text to numbers, memory allocation, random numbers and various other utility functions. This header file replaces header file (stdlib.h).
+       <li><h2>(ctime)</h2></li>
+       Contains function prototypes and types for manipulating the time and date. This header file replaces header file (time.h).
+  
+       <li><h2>(cctype)</h2></li>
+ 
+       Contains function prototypes for functions that test characters for certain properties (such as whether the character is a digit or a punctuation), and function prototypes for functions that can be used to convert lowercase letters to uppercase letters and vice versa. This header file replaces header file <ctype.h>
+       
+        <li><h2>(cstring)</h2></li>
+       
+       Contains function prototypes for C-style string-processing functions. This header file replaces header file (string.h).
+       
+       <li><h2>(cstdio)</h2></li>
+       
+       Contains function prototypes for the C-style standard input/output library functions and information used by them. This header file replaces header file <stdio.h>.
+       
+       <li><h2>(fstream)</h2></li>
+       
+       Contains function prototypes for functions that perform input from files on disk and output to files on disk.
+       This header file replaces header file (fstream.h).
+        
+       <li><h2>(climits)</h2></li>
+       
+       Contains the integral size limits of the system. This header file replaces header file (limits.h).
+       
+       <li><h2>(cassert)</h2></li>
+       
+       Contains macros for adding diagnostics that aid program debugging. This replaces header file (assert.h) from pre-standard C++.
+       
+       <li><h2>(cfloat)</h2></li>
+       
+       Contains the floating-point size limits of the system. This header file replaces header file (float.h).
+       
+       <li><h2>(string)</h2></li>
+       Contains the definition of class string from the C++ Standard Library
+       
+        <ul>
+          <li>(list)</li>
+          <li>(deque)</li>
+          <li>(queue)</li>
+          <li>(stack)</li>
+          <li>(map)</li>
+          <li>(set)</li>
+          <li>(bitset)</li>
+       </ul>
+       <div class="q2"> These header files contain classes that implement the C++ Standard Library containers.
+        Containers store data during a program's execution.</div>
+       <li><h2>(typeinfo)</h2></li>
+           
+       Contains classes for runtime type identification (determining data types at execution time).
+           
+       <li><h2>(exception),(stdexcept)</h2></li>
+           
+       These header files contain classes that are used for exception handling.
+           
+       <li><h2>(memory)</h2></li>
+           
+       Contains classes and functions used by the C++ Standard Library to allocate memory to the C++ Standard Library containers.
+           
+       <li><h2>(sstream)</h2></li>
+           
+       Contains function prototypes for functions that perform input from strings in memory and output to strings in memory.
+           
+       <li><h2>(functional)</h2></li>
+           
+       Contains classes and functions used by C++ Standard Library algorithms.
+           
+       <li><h2>(iterator)</h2></li>
+           
+       Contains classes for accessing data in the C++ Standard Library containers.
+           
+       <li><h2>(algorithm)</h2></li>
+           
+       Contains functions for manipulating data in C++ Standard Library containers.
+           
+       <li><h2>(locale)</h2></li>
+           
+       Contains classes and functions normally used by stream processing to process data in the natural form for different languages 
+       (e.g., monetary formats, sorting strings, character presentation, etc.).
+           
+       <li><h2>(limits)</h2></li>
+           
+       Contains classes for defining the numerical data type limits on each computer platform.
+           
+       <li><h2>(utility)</h2> </li>
+       Contains classes and functions that are used by many C++ Standard Library header files.
+     </ul>
+
+                            <!--واقفه عند ال math..funcation-->          
+   </p>
+   <p>
+     <h1> Mathematical Functions : </h1>
+     Some of the important mathematical functions in header file (cmath) are
+      <table border="3" bgcolor="yellow">
+       <tr><td>Function </td><td> Meaning</td></tr>
+       <tr><td>sin(x)</td><td>Sine of an angle x (measured in radians)</td></tr>
+       <tr><td>cos(x)</td><td>Cosine of an angle x (measured in radians)</td></tr>
+       <tr><td>tan(x)</td><td>Tangent of an angle x (measured in radians)</td></tr>
+       <tr><td> asin(x)</td><td>Sin-1 (x) where x (measured in radians)</td></tr>
+       <tr><td>acos(x)</td><td>Cos-1 (x) where x (measured in radians)</td></tr>
+       <tr><td>exp(x)</td><td>Exponential function of x (ex)</td></tr>
+       <tr><td>log(x)</td><td>logarithm of x</td></tr>
+       <tr><td>log 10(x)</td><td>Logarithm of number x to the base 10</td></tr>
+       <tr><td>sqrt(x)</td><td>Square root of x</td></tr>
+       <tr><td>pow(x, y)</td><td>x raised to the power y</td></tr>
+       <tr><td>abs(x)</td><td>Absolute value of integer number x</td></tr>
+       <tr><td>fabs(x)</td><td>	Absolute value of real number x</td></tr>
+
+      </table>
+      
+     <h1>Character Functions : </h1>
+     All the character functions require (cctype) header file. The following table lists the function.
+      <table border="3" bgcolor="yellow">
+       <tr><td>Function	</td><td>Meaning</td></tr>
+       <tr><td>isalpha(c)</td><td>It returns True if C is an uppercase letter and False if c is lowercase.</td></tr>
+       <tr><td>isdigit(c)</td><td>It returns True if c is a digit (0 through 9) otherwise False.</td></tr>
+       <tr><td>isalnum(c)</td><td>It returns True if c is a digit from 0 through 9 or an alphabetic character (either uppercase or lowercase) otherwise False.    </td></tr>
+       <tr><td>islower(c)</td><td>It returns True if C is a lowercase letter otherwise False.</td></tr>
+       <tr><td>isupper(c)</td><td>It returns True if C is an uppercase letter otherwise False.</td></tr>
+       <tr><td>toupper(c)</td><td>It converts c to uppercase letter.</td></tr>
+       <tr><td>tolower(c)	</td><td>It converts c to lowercase letter.</td></tr>
+
+      </table>
+    </p>
+    <h1> 2) user-defined function : </h1>
+    <p> A user-defined function groups code to perform a specific task and
+      that group of code is given a name (identifier).
+       When the function is invoked from any part of the program,
+      it all executes the codes defined in the body of the function.
+      <br>
+      <h3>the syntax is : </h3>
+      <div class="code01" > 
+        returnType functionName (parameter1, parameter2,...)
+       <br> {
+       <br>// function body   
+        <br>}
+      </div>
+
+      <h3>there's an example of it : </h3>
+     <div class="code1"><p class="comm" >// function declaration<br></p>
+       void greet() {
+         <br>cout << "Hello World";
+        <br>
+      </div>
+      <h4>( -the name of the function is greet()<br>
+       -the return type of the function is void<br>
+       -the empty parentheses mean it doesn't have any parameters<br>
+       -the function body is written inside {})</h4>
+        <h1> Calling a Function : </h1>
+         In the above program, we have declared a function named greet().<br>
+         To use the greet() function, we need to call it.
+        <br><h3> Here's how we can call the above greet() function.</h3>
+        <div class="code02">int main() {  <br>  
+           <p class="comm">// calling a function </p>  <br>
+           greet(); <br>
+          }</div>
+          <div class="code2">
+           #include &lt; iostream &gt;<br>
+           using namespace std;<br>
+           <p class="comm">// declaring a function<br></p>
+            void greet() {<br>
+            cout << "Hello there!";<br>
+            }<br>
+            int main() {<br>
+           <p class="comm">// calling the function<br></p>
+            greet();<br>
+            return 0;<br>
+           }
+           </div>
+            <div class="code20">
+              Output:
+             Hello there!
+            </div>
+         <!--وقفت عند البراميتارز-->
+             
+
+
+
+
+
+    </p>
+  
+    </body>
+
+
+
+
+
+</html>

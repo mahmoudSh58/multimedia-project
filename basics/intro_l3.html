@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- end font  -->
 <link rel="stylesheet" href="../css/normalized.css">
-    <link rel="stylesheet" href="../css/basics/intro_l1.css">
+    <link rel="stylesheet" href="../css/basics/intro_l3.css">
     <link rel="stylesheet" href="../css/all.min.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
                     <li>
                         <span class="header-li">Basics</span>
                         <ul>
-                            <li><a href="">Introduction</a></li>
+                            <li><a href="intro_l1.html">Introduction</a></li>
                             <li><a href="">Flow control</a></li>
                             <li><a href="">Functions</a></li>
                             <li><a href="">Arrays</a></li>
@@ -54,7 +54,7 @@
     <div class="container">
         <div class="bio">
             <h1 class="topic">Introduction : </h1>
-            <h1 class="lesson"> lesson 1: Basic Input / Output</h1>
+            <h1 class="lesson"> lesson 3: Operators</h1>
         </div>
     </div>
 </div>
@@ -62,32 +62,1473 @@
 <!-- body -->
 <div class="body">
     <div class="container">
+
+        <p>Operators are symbols that perform operations on variables and values. For example, + is an operator used for addition, while - is an operator used for subtraction.</p>
+        <p>Operators in C++ can be classified into 6 types:</p>
+        <ol>
+            <li>Arithmetic Operators</li>
+            <li>Assignment Operators</li>
+            <li>Relational Operators</li>
+            <li>Logical Operators</li>
+            <li>Bitwise Operators</li>
+            <li>Other Operators</li>
+        </ol>
+        <h2>1. C++ Arithmetic Operators</h2>
+        <p>Arithmetic operators are used to perform arithmetic operations on variables and data. For example: <span style="background-color: rgba(251, 255, 0, 0.5);">a + b;</span></p>
+
+        <div class="WordSection1">
+
+            <table class="MsoTable15Plain1" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid #BFBFBF .5pt;
+             mso-border-themecolor:background1;mso-border-themeshade:191;mso-yfti-tbllook:
+             1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+             <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes;
+              height:16.1pt">
+              <td width="133" valign="top" style="width:99.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;mso-border-alt:
+              solid #BFBFBF .5pt;mso-border-themecolor:background1;mso-border-themeshade:
+              191;padding:0cm 5.4pt 0cm 5.4pt;height:16.1pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              5"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">operator<o:p></o:p></span></b></p>
+              </td>
+              <td width="347" valign="top" style="width:260.2pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt;height:
+              16.1pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">operation<o:p></o:p></span></b></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:0;height:15.45pt">
+              <td width="133" valign="top" style="width:99.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt;
+              height:15.45pt">
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+              line-height:normal;mso-yfti-cnfc:68"><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+              &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+              color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">+<o:p></o:p></span></p>
+              </td>
+              <td width="347" valign="top" style="width:260.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt;
+              height:15.45pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Addition<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:1;height:16.1pt">
+              <td width="133" valign="top" style="width:99.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt;height:
+              16.1pt">
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+              line-height:normal;mso-yfti-cnfc:4"><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+              &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+              color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">-<o:p></o:p></span></p>
+              </td>
+              <td width="347" valign="top" style="width:260.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt;height:
+              16.1pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Subtraction<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:2;height:15.45pt">
+              <td width="133" valign="top" style="width:99.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt;
+              height:15.45pt">
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+              line-height:normal;mso-yfti-cnfc:68"><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+              &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+              color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">*<o:p></o:p></span></p>
+              </td>
+              <td width="347" valign="top" style="width:260.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt;
+              height:15.45pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Multiplication<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:3;height:16.1pt">
+              <td width="133" valign="top" style="width:99.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt;height:
+              16.1pt">
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+              line-height:normal;mso-yfti-cnfc:4"><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+              &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+              color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">/<o:p></o:p></span></p>
+              </td>
+              <td width="347" valign="top" style="width:260.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt;height:
+              16.1pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Division<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes;height:15.45pt">
+              <td width="133" valign="top" style="width:99.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt;
+              height:15.45pt">
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+              line-height:normal;mso-yfti-cnfc:68"><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+              &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+              color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">%<o:p></o:p></span></p>
+              </td>
+              <td width="347" valign="top" style="width:260.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt;
+              height:15.45pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Modulo Operation
+              (Remainder after division)<o:p></o:p></span></p>
+              </td>
+             </tr>
+            </tbody></table>
+            
+            <p class="MsoNormal"><span lang="EN-GB" style="font-size:14.0pt;line-height:115%;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+            
+        </div>
+
+        <p>Example 1: Arithmetic Operators</p>
+
+        <div class="code">
+
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#EEECE1;
+            mso-background-themecolor:background2;vertical-align:baseline"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#273239;letter-spacing:.1pt;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp; </span>#include &lt;iostream&gt;<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp; </span>using namespace <span class="GramE">std;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp; </span>int <span class="GramE">main(</span>) {<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>int
+            a, <span class="GramE">b;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>a =
+            <span class="GramE">7;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>b =
+            <span class="GramE">2;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>//
+            printing the sum of a and b<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">cout</span> &lt;&lt; "a + b = " &lt;&lt; (a + b)
+            &lt;&lt; <span class="SpellE"><span class="GramE">endl</span></span><span class="GramE">;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>//
+            printing the difference of a and b<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">cout</span> &lt;&lt; "a - b = " &lt;&lt; (a - b)
+            &lt;&lt; <span class="SpellE"><span class="GramE">endl</span></span><span class="GramE">;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>//
+            printing the product of a and b<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">cout</span> &lt;&lt; "a * b = " &lt;&lt; (a * b)
+            &lt;&lt; <span class="SpellE"><span class="GramE">endl</span></span><span class="GramE">;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>//
+            printing the division of a by b<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">cout</span> &lt;&lt; "a / b = " &lt;&lt; (a / b)
+            &lt;&lt; <span class="SpellE"><span class="GramE">endl</span></span><span class="GramE">;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>//
+            printing the modulo of a by b<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">cout</span> &lt;&lt;
+            "a % b = " &lt;&lt; (a % b) &lt;&lt; <span class="SpellE"><span class="GramE">endl</span></span><span class="GramE">;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>return
+            <span class="GramE">0;</span><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:13.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+            letter-spacing:.1pt;mso-fareast-language:EN-GB"><span style="mso-spacerun:yes">&nbsp; </span>}</span><span lang="EN-GB" style="font-size:
+            10.5pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:14.25pt;background:
+            #EEECE1;mso-background-themecolor:background2"><span lang="EN-GB" style="font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+
+        <div class="code2">
+
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt"><br>
+            &nbsp;&nbsp;<span class="GramE">Output :</span></span><span style="font-size:
+            13.5pt;font-family:&quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-ansi-language:EN-US"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#948A54;
+            letter-spacing:.1pt">&nbsp;</span><span style="font-size:13.5pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;color:black;mso-ansi-language:EN-US"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt"><span style="mso-spacerun:yes">&nbsp;
+            </span>a + b = 9<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt"><span style="mso-spacerun:yes">&nbsp;
+            </span>a - b = 5<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt"><span style="mso-spacerun:yes">&nbsp;
+            </span>a * b = 14<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt"><span style="mso-spacerun:yes">&nbsp;
+            </span>a / b = 3<o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            Arial;color:#948A54;letter-spacing:.1pt"><span style="mso-spacerun:yes">&nbsp;
+            </span>a % b = 1</span><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#948A54;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;background:#F2F2F2;
+            vertical-align:baseline"><span lang="EN-GB" style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#948A54;
+            letter-spacing:.1pt">&nbsp;</span><span style="font-size:13.5pt;font-family:
+            &quot;Work Sans&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;color:black;mso-ansi-language:EN-US"><o:p></o:p></span></p>
+            
+            <p class="MsoNormal"><span style="mso-ansi-language:EN-US"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+
+        <h4>Division Operator</h4>
+        <p style="padding: 15px; background-color: rgba(251, 255, 0, 0.5);">
+            7/2 is 3<br><br>
+            7.0 / 2 is 3.5<br><br>
+            7 / 2.0 is 3.5<br><br>
+            7.0 / 2.0 is 3.5      
+        </p>
+
+        <p> <strong>Note:</strong> The % operator can only be used with integers.</p>
+
+        <h4>Increment and Decrement Operators</h4>
+        <p>C++ also provides increment and decrement operators: ++ and -- respectively.</p>
+        <p style="padding: 15px; background-color: rgba(251, 255, 0, 0.5);">
+            ++   increases the value of the operand by 1 <br><br>
+            --     decreases it by 1                
+        </p>
+
+        <h2>2. C++ Assignment Operators</h2>
+        <p>In C++, assignment operators are used to assign values to variables. For example: <span style="background-color: rgba(251, 255, 0, 0.5);">a = 5;</span></p>
+
+        <div class="WordSection1">
+
+            <table class="MsoTable15Plain1" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid #BFBFBF .5pt;
+             mso-border-themecolor:background1;mso-border-themeshade:191;mso-yfti-tbllook:
+             1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+             <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;mso-border-alt:
+              solid #BFBFBF .5pt;mso-border-themecolor:background1;mso-border-themeshade:
+              191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              5"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Operator<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Example<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Equivalent to<o:p></o:p></span></b></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:0">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">=<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = b;<o:p></o:p></span></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:1">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">+=<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a += b;<o:p></o:p></span></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a = a + b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:2">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">-=<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a -= b;<o:p></o:p></span></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = a - b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:3">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">*=<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a *= b;<o:p></o:p></span></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a = a * b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:4">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">/=<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a /= b;<o:p></o:p></span></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = a / b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">%=<o:p></o:p></span></b></p>
+              </td>
+              <td width="170" valign="top" style="width:127.6pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a %= b;<o:p></o:p></span></p>
+              </td>
+              <td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a = a % b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+            </tbody></table>
+            
+            <p class="MsoNormal"><span lang="EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+
+        <h2>3. C++ Relational Operators</h2>
+        <p>In A relational operator is used to check the relationship between two operands. For example: <span style="background-color: rgba(251, 255, 0, 0.5);">a > b;</span></p>
+        <p>Here, > is a relational operator. It checks if a is greater than b or not.<br>
+            If the relation is true, it returns non-zero number whereas if the relation is false, it returns 0.
+        </p>
+
+        <div class="WordSection1">
+
+            <table class="MsoTable15Plain1" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid #BFBFBF .5pt;
+             mso-border-themecolor:background1;mso-border-themeshade:191;mso-yfti-tbllook:
+             1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+             <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;mso-border-alt:
+              solid #BFBFBF .5pt;mso-border-themecolor:background1;mso-border-themeshade:
+              191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              5"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Operator<o:p></o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Meaning<o:p></o:p></span></b></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Example<o:p></o:p></span></b></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:0">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">==<o:p></o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Is Equal To<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:1">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">!=<o:p></o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Not Equal To<o:p></o:p></span></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a = a + b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:2">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&gt;<o:p>&nbsp;</o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Greater Than<o:p></o:p></span></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = a - b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:3">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&lt;<o:p>&nbsp;</o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Less Than<o:p></o:p></span></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a = a * b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:4">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&gt;=<o:p></o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Greater Than or Equal To<o:p></o:p></span></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">a = a / b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&lt;=<o:p></o:p></span></b></p>
+              </td>
+              <td width="236" valign="top" style="width:177.2pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Less Than or Equal To</span><span lang="EN-GB" style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+              <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">a = a % b;<o:p></o:p></span></p>
+              </td>
+             </tr>
+            </tbody></table>
+            
+            <p class="MsoNormal"><span lang="EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        
+        <p> <strong>Note:</strong> Relational operators are used in decision-making and loops.</p>
+
+        <h2>4. C++ Logical Operators</h2>
+        <p>Logical operators are used to check whether an expression is true or false. If the expression is true, it returns non-zero number whereas if the expression is false, it returns 0.</p>
+
+        <div class="WordSection1">
+
+            <table class="MsoTable15Plain1" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid #BFBFBF .5pt;
+             mso-border-themecolor:background1;mso-border-themeshade:191;mso-yfti-tbllook:
+             1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+             <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;mso-border-alt:
+              solid #BFBFBF .5pt;mso-border-themecolor:background1;mso-border-themeshade:
+              191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              5"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Operator<o:p></o:p></span></b></p>
+              </td>
+              <td width="529" valign="top" style="width:14.0cm;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Meaning<o:p></o:p></span></b></p>
+              </td>
+              <td width="227" valign="top" style="width:6.0cm;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Example<o:p></o:p></span></b></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:0">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&amp;&amp;<o:p></o:p></span></b></p>
+              </td>
+              <td width="529" valign="top" style="width:14.0cm;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Logical <span class="GramE">AND :</span> True only if all the operands are true.<o:p></o:p></span></p>
+              </td>
+              <td width="227" valign="top" style="width:6.0cm;border-top:none;border-left:none;
+              border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">expression1 &amp;&amp;
+              expression2<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:1">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">||<o:p></o:p></span></b></p>
+              </td>
+              <td width="529" valign="top" style="width:14.0cm;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Logical <span class="GramE">OR :</span> True
+              if at least one of the operands is true.<o:p></o:p></span></p>
+              </td>
+              <td width="227" valign="top" style="width:6.0cm;border-top:none;border-left:none;
+              border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">expression1 || expression2<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">!<o:p></o:p></span></b></p>
+              </td>
+              <td width="529" valign="top" style="width:14.0cm;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Logical <span class="GramE">NOT :</span> True only if the operand is false.<o:p></o:p></span></p>
+              </td>
+              <td width="227" valign="top" style="width:6.0cm;border-top:none;border-left:none;
+              border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">!<span dir="RTL"></span><span dir="RTL"><span dir="RTL"></span> </span>expression<o:p></o:p></span></p>
+              </td>
+             </tr>
+            </tbody></table>
+            
+            <p class="MsoNormal"><span lang="EN-GB" style="font-size:14.0pt;line-height:115%;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="MsoNormal"><span lang="EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+
+        <h2>5. C++ Bitwise Operators</h2>
+        <p>In C++, bitwise operators are used to perform operations on individual bits. They can only be used alongside char and int data types.</p>
+
+        <div class="WordSection1">
+
+            <table class="MsoTable15Plain1" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid #BFBFBF .5pt;
+             mso-border-themecolor:background1;mso-border-themeshade:191;mso-yfti-tbllook:
+             1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+             <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;mso-border-alt:
+              solid #BFBFBF .5pt;mso-border-themecolor:background1;mso-border-themeshade:
+              191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              5"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Operator<o:p></o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-left:none;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              1"><b><span lang="EN-GB" style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Description<o:p></o:p></span></b></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:0">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&amp;<o:p></o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Binary <span class="GramE">AND
+              :</span> 1010 &amp; 1100 </span><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:Wingdings;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-bidi;
+              mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+              mso-hansi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:18.0pt;
+              mso-fareast-language:EN-GB;mso-char-type:symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:Wingdings">à</span></span><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB"> 1000<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:1">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">|<o:p></o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Binary <span class="GramE">OR :</span> 0011
+              | 1010 </span><span lang="EN-GB" style="font-size:12.0pt;font-family:Wingdings;
+              mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+              &quot;Times New Roman&quot;;mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-bidi;
+              color:#25265E;mso-font-kerning:18.0pt;mso-fareast-language:EN-GB;mso-char-type:
+              symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;
+              mso-symbol-font-family:Wingdings">à</span></span><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB"> 1011<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:2">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">^<o:p></o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Binary <span class="GramE">XOR
+              :</span> 0110 ^ 1100 </span><span lang="EN-GB" style="font-size:12.0pt;
+              font-family:Wingdings;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-bidi;
+              mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+              mso-hansi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:18.0pt;
+              mso-fareast-language:EN-GB;mso-char-type:symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:Wingdings">à</span></span><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB"> 1010<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:3">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">~<o:p></o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Binary One's <span class="GramE">Complement
+              :</span> ~(1010) </span><span lang="EN-GB" style="font-size:12.0pt;font-family:
+              Wingdings;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-bidi;
+              mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+              mso-hansi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:18.0pt;
+              mso-fareast-language:EN-GB;mso-char-type:symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:Wingdings">à</span></span><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB"> 0101<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:4">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              68"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&lt;&lt;<o:p>&nbsp;</o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;background:#F2F2F2;mso-background-themecolor:
+              background1;mso-background-themeshade:242;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              64"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">Binary Shift <span class="GramE">Left :</span> 0010 &lt;&lt; 2 </span><span lang="EN-GB" style="font-size:12.0pt;font-family:Wingdings;mso-ascii-font-family:Arial;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB;mso-char-type:symbol;
+              mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;
+              mso-symbol-font-family:Wingdings">à</span></span><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB"> 1000<o:p></o:p></span></p>
+              </td>
+             </tr>
+             <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+              <td width="113" valign="top" style="width:84.65pt;border:solid #BFBFBF 1.0pt;
+              mso-border-themecolor:background1;mso-border-themeshade:191;border-top:none;
+              mso-border-top-alt:solid #BFBFBF .5pt;mso-border-top-themecolor:background1;
+              mso-border-top-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal;mso-yfti-cnfc:
+              4"><b><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+              mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+              mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;
+              mso-font-kerning:18.0pt;mso-fareast-language:EN-GB">&gt;&gt;<o:p>&nbsp;</o:p></span></b></p>
+              </td>
+              <td width="652" valign="top" style="width:489.05pt;border-top:none;border-left:
+              none;border-bottom:solid #BFBFBF 1.0pt;mso-border-bottom-themecolor:background1;
+              mso-border-bottom-themeshade:191;border-right:solid #BFBFBF 1.0pt;mso-border-right-themecolor:
+              background1;mso-border-right-themeshade:191;mso-border-top-alt:solid #BFBFBF .5pt;
+              mso-border-top-themecolor:background1;mso-border-top-themeshade:191;
+              mso-border-left-alt:solid #BFBFBF .5pt;mso-border-left-themecolor:background1;
+              mso-border-left-themeshade:191;mso-border-alt:solid #BFBFBF .5pt;mso-border-themecolor:
+              background1;mso-border-themeshade:191;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB">Binary Shift <span class="GramE">Right :</span>
+              0100 &gt;&gt; 2 </span><span lang="EN-GB" style="font-size:12.0pt;font-family:
+              Wingdings;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-bidi;
+              mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+              mso-hansi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:18.0pt;
+              mso-fareast-language:EN-GB;mso-char-type:symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:Wingdings">à</span></span><span lang="EN-GB" style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+              minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:
+              minor-bidi;mso-bidi-theme-font:minor-bidi;color:#25265E;mso-font-kerning:
+              18.0pt;mso-fareast-language:EN-GB"> 0001</span><span lang="EN-GB" style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+             </tr>
+            </tbody></table>
+            
+            <p class="MsoNormal"><span lang="EN-GB"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+
+
         <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
             <iframe width="100%" height="400"
-            src="https://www.youtube.com/embed/1Wrc91mp980" frameborder="0" style="border-radius: 5px; text-align: center;">
+            src="https://www.youtube.com/embed/AZvKbSdvoRU" frameborder="0" style="border-radius: 5px; text-align: center;">
             </iframe>
         </div>
+
+        <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+            <iframe width="100%" height="400"
+            src="https://www.youtube.com/embed/Y7rbispzlLo" frameborder="0" style="border-radius: 5px; text-align: center;">
+            </iframe>
+        </div>
+
         <div class="topic">
             <p>Another topic:</p>
              <ol>
-                <li><a href="https://www.javatpoint.com/cpp-getline" target="_blank" >getline</a></li>
-                <li><a href="https://www.geeksforgeeks.org/cincout-vs-scanfprintf/" target="_blank">Cin-Cout vs Scanf-Printf </a></li>
+                <li><a href="https://www.tutorialspoint.com/cplusplus/cpp_increment_decrement_operators.htm" target="_blank" >Increment and Decrement Operators</a></li>
+                <li><a href="https://www.geeksforgeeks.org/modulo-operator-in-c-cpp-with-examples/" target="_blank">Modulo Operator</a></li>
             </ol>
         </div>
 
         <div class="problem">
             <p style="text-align: center;">Problems</p>
              <ul>
-                <li><a href="https://www.hackerrank.com/challenges/30-hello-world/problem" target="_blank">problem 1</a></li>
-                <li><a href="https://www.hackerrank.com/challenges/cpp-input-and-output/problem" target="_blank">problem 2</a></li>
+                <li><a href="https://codeforces.com/group/kFd1Vb0XSf/contest/375444/problem/E" target="_blank">problem 1</a></li>
+                <li><a href="https://codeforces.com/group/kFd1Vb0XSf/contest/375444/problem/D" target="_blank">problem 2</a></li>
             </ul>
         </div>
         <div class="next_lesson">
-            <div class="previous"><a href="">&lt;&lt; previous</a></div>
-            <div class="next"><a href="intro_l2.html">next &gt;&gt;</a></div>
+            <div class="previous"><a href="intro_l2.html">&lt;&lt; previous</a></div>
+            <div class="next" style="visibility: hidden;"><a href="intro_l2.html">next &gt;&gt;</a></div>
         </div>
         <div class="next_topic">
-            <div class="previous"><a href="">&lt;&lt; previous</a></div>
+            <div class="previous" style="visibility: hidden;"><a href="">&lt;&lt; previous</a></div>
             <div class="mid">topic</div>
             <div class="next"><a href="">next &gt;&gt;</a></div>
         </div>
