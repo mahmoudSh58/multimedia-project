@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="../css/normalized.css">
+    <link rel="stylesheet" href="../css/basics/controlflow2.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+<body>
+    <!--start header -->
+    <div class="header">
+        <div class="container">
+            <img src="../image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1 class="topic">Statements and flow control</h1>
+            <h1 class="lesson"> lesson 3: Switch</h1>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+    <div class="container">
+        <p>The syntax of the switch statement is a bit peculiar. Its purpose is to check for a value among a number of possible constant expressions. It is something similar to concatenating if-else statements, but limited to constant expressions</p>
+        <div class="syntax" ><p>Syntax</p></div>
+        <div class="syntax1">
+
+            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+            0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            font-weight:normal"><o:p>&nbsp;</o:p></span></span></p>
+            
+            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+            0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            font-weight:normal">switch</span></span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:
+            major-fareast;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;font-weight:normal">(</span></span><em><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            font-weight:normal">expression</span></em><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:
+            major-fareast;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;font-weight:normal">) {</span></span><span style="font-size:14.0pt;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
+            minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal"><br>
+            </span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;&nbsp;</span></span><span class="javakeywordcolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;font-weight:normal">case</span></span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;x:</span></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;font-weight:normal"><br>
+            </span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="commentcolor"><i><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;font-weight:normal">// code block</span></i></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;font-weight:normal"><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeywordcolor">break</span>;</span><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;<span class="javakeywordcolor">case</span>&nbsp;y:</span><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;<span class="javanumbercolor">&nbsp;</span><span class="commentcolor"><i>// code block</i></span></span><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeywordcolor">break</span>;</span><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;<span class="javakeywordcolor">default</span>:</span><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;<span class="javanumbercolor">&nbsp;</span><span class="commentcolor"><i>// code block</i></span></span><br>
+            <span style="background:#EEECE1">}<o:p></o:p></span></span></p>
+            
+            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+            0in;background:#EEECE1"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;background:white;font-weight:normal"><o:p></o:p></span></p>
+            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+            0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            font-weight:normal"><o:p>&nbsp;</o:p></span></span></p>
+            
+            
+        </div>
+        <br>
+        <p>The expression present in the parentheses following the switch keyword is evaluated against multiple cases, searching for the first equality between the expression and the constants. If none of the cases match, the default one (if it exists, since it is optional) is executed. It is important to keep in mind that the order of evaluation is sequential, and as soon as one of the constants matches, the corresponding group of statements are executed. The break keyword prevents them from further execution. If the break keyword is not included, all statements following the case, including the ones under different labels, are also executed.</p>
+        <br>
+        <div class="code1">
+
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">int</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">&nbsp;day =&nbsp;</span></span><span class="javanumbercolor"><span style="font-size:14.0pt;line-height:107%;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
+            minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">4</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:
+            &quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228">;</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><br>
+            <span class="javakeywordcolor">switch</span><span class="javacolor">&nbsp;(day) {</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">1</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Monday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">2</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp; <span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Tuesday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">3</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp; <span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Wednesday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">4</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp; <span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Thursday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">5</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp; <span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Friday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">6</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp; <span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Saturday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">case</span><span class="javacolor">&nbsp;</span><span class="javanumbercolor">7</span><span class="javacolor">:</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp; <span class="SpellE">cout</span>
+            &lt;&lt;&nbsp;</span><span class="javastringcolor">"Sunday"</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">}</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p></o:p></span></p>
+            
+        </div>
+        <br><hr><br>
+        <h2 style="text-decoration:underline;">C++ Break</h2>
+        <p>break leaves a loop, even if the condition for its end is not fulfilled. It can be used to end an infinite loop, or to force it to end before its natural end.</p>
+        <div class="code1">
+
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">for</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">&nbsp;(</span></span><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">int</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">&nbsp;<span class="SpellE">i</span> =&nbsp;</span></span><span class="javanumbercolor"><span style="font-size:14.0pt;line-height:107%;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
+            minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">0</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:
+            &quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228">; <span class="SpellE">i</span>
+            &lt;&nbsp;</span></span><span class="javanumbercolor"><span style="font-size:
+            14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228">10</span></span><span class="javacolor"><span style="font-size:
+            14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228">; <span class="SpellE">i</span>++) {</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">if</span><span class="javacolor">&nbsp;(<span class="SpellE">i</span> ==&nbsp;</span><span class="javanumbercolor">4</span><span class="javacolor">)</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">break</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp; <span class="SpellE">cout</span> &lt;&lt; <span class="SpellE">i</span> &lt;&lt;&nbsp;</span><span class="javastringcolor">"
+            "</span><span class="javacolor">;</span><br>
+            <span class="javacolor">}</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></span></p>
+            
+        </div>
+        <br>
+        <div class="output1">
+
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:16.0pt;
+            line-height:107%;color:#948A54"><o:p>&nbsp;</o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:16.0pt;
+            line-height:107%;color:#948A54"><span style="mso-spacerun:yes">&nbsp;</span>Output:<o:p></o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:16.0pt;
+            line-height:107%;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>0 1 2 3 <o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="color:#948A54"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <br><hr><br>
+        <h2 style="text-decoration:underline;">C++ Continue</h2>
+        <p>The continue statement causes the program to skip the rest of the loop in the current iteration, as if the end of the statement block had been reached, causing it to jump to the start of the following iteration. </p>
+        <div class="code1">
+
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">for</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">&nbsp;(</span></span><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">int</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">&nbsp;<span class="SpellE">i</span> =&nbsp;</span></span><span class="javanumbercolor"><span style="font-size:14.0pt;line-height:107%;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
+            minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">0</span></span><span class="javacolor"><span style="font-size:14.0pt;line-height:107%;font-family:
+            &quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228">; <span class="SpellE">i</span>
+            &lt;&nbsp;</span></span><span class="javanumbercolor"><span style="font-size:
+            14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228">5</span></span><span class="javacolor"><span style="font-size:
+            14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228">; <span class="SpellE">i</span>++) {</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><br>
+            <span class="javacolor">&nbsp;&nbsp;</span><span class="javakeywordcolor">if</span><span class="javacolor">&nbsp;(<span class="SpellE">i</span> ==&nbsp;</span><span class="javanumbercolor">4</span><span class="javacolor">) {</span><br>
+            <span class="javacolor">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeywordcolor">continue</span><span class="javacolor">;</span><br>
+            <span class="javacolor">&nbsp; }</span><br>
+            <span class="javacolor">&nbsp; <span class="SpellE">cout</span> &lt;&lt; <span class="SpellE">i</span> &lt;&lt;&nbsp;</span><span class="javastringcolor">"
+            "</span><span class="javacolor">;</span><br>
+            <span class="javacolor">}<o:p></o:p></span></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="code1"><span style="font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <div class="output1">
+
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><o:p>&nbsp;</o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp; </span><span class="GramE">Output :</span><o:p></o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>0 1
+            2 3 5<o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+            <iframe width="100%" height="400"
+            src="https://www.youtube.com/embed/-MTeqw7gZf0" frameborder="0" style="border-radius: 5px; text-align: center;">
+            </iframe>
+        </div>
+        <div class="topic">
+            <p>Another topic:</p>
+             <ol>
+                <li><a href="https://www.geeksforgeeks.org/nested-switch-statement-in-c/?ref=rp" target="_blank" >Nested switch statement in C++</a></li>
+                
+            </ol>
+        </div>
+
+        <div class="problem">
+            <p style="text-align: center;">Problems</p>
+             <ul>
+                <li><a href="https://codeforces.com/problemset/problem/158/B" target="_blank">problem 1</a></li>
+                <li><a href="https://codeforces.com/problemset/problem/1433/A" target="_blank">problem 2</a></li>
+            </ul>
+        </div>
+        <div class="next_lesson">
+            <div class="previous"><a href="controlflow2.html">&lt;&lt; previous</a></div>
+            
+        </div>
+        <div class="next_topic">
+            <div class="previous" ><a href="intro_l1.html">&lt;&lt; previous</a></div>
+            <div class="mid">topic</div>
+            <div class="next"><a href="funcations.html">next &gt;&gt;</a></div>
+        </div>
+    </div>
+</div>
+<!-- end body -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+        <div class="icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </div>
+</div>
+<!-- end footer -->
+  
+
+       
+    </div>
+</body>

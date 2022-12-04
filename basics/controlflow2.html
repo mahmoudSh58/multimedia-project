@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Control</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="../css/normalized.css">
+    <link rel="stylesheet" href="../css/basics/controlflow2.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+<body>
+     <!-- header -->
+     <div class="header">
+        <div class="container">
+            <img src="../image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1 class="topic">Statements and flow control</h1>
+            <h1 class="lesson"> lesson 2: Iteration statements (loops)</h1>
+            
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+    <div class="container">
+        <p>Loops can execute a block of code as long as a specified condition is reached. Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+        <h2 style="text-decoration:underline;">The while loop</h2>
+        <p>The simplest kind of loop is the while-loop</p>
+        <div class="syntax" ><p>Syntax</p></div>
+        <div class="syntax1">
+
+            <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span class="javakeywordcolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">while</span></span><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:
+            Consolas;color:#4F6228">&nbsp;(</span></span><em><span style="font-size:11.5pt;
+            line-height:107%;font-family:Consolas;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">condition</span></em><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">)
+            {</span></span><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;
+            color:#4F6228"><br>
+            <span class="javacolor"><i>&nbsp;&nbsp;</i></span><span class="commentcolor"><i>//
+            code block to be executed</i></span><br>
+            <span style="background:#EEECE1"><span style="mso-spacerun:yes">&nbsp; </span>}</span><span style="background:white"><o:p></o:p></span></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <br>
+        <div class="code1">
+
+            <p class="code1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228;
+            background:#EEECE1">int</span></span><span style="font-size:11.5pt;line-height:
+            107%;font-family:Consolas;color:#4F6228;background:#EEECE1">&nbsp;<span class="SpellE">i</span> =&nbsp;<span class="javanumbercolor">0</span>;</span><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228"><br>
+            <span class="javakeywordcolor"><span style="background:#EEECE1">while</span></span><span style="background:#EEECE1">&nbsp;(<span class="SpellE">i</span> &lt;&nbsp;<span class="javanumbercolor">5</span>) {</span><br>
+            <span style="background:#EEECE1">&nbsp; <span class="SpellE">cout</span> &lt;&lt;
+            <span class="SpellE">i</span> &lt;&lt;&nbsp;<span class="javastringcolor">" "</span>;</span><br>
+            <span style="background:#EEECE1">&nbsp;&nbsp;<span class="SpellE">i</span>++;</span><br>
+            <span style="background:#EEECE1">}</span><span style="background:white"><o:p></o:p></span></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span style="font-size:11.5pt;
+            line-height:107%;font-family:Consolas;color:#4F6228;background:white"><o:p></o:p></span></p>
+            
+        </div>
+        
+        <div class="output1">
+
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>output:<o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span>0 1 2 3 4<o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <p><strong>Note:</strong> Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+        <br><hr><br>
+        <h2 style="text-decoration:underline;">The Do/While Loop</h2>
+        <p>The <strong>do/while</strong> loop is a variant of the <strong>while</strong> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true</p>
+        <div class="syntax" ><p>Syntax</p></div>
+        <div class="syntax1">
+
+            <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;background:#EEECE1"><o:p>&nbsp;</o:p></span></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;background:#EEECE1">do</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;background:#EEECE1">&nbsp;{</span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><br>
+            <i><span style="background:#EEECE1">&nbsp;&nbsp;<span class="commentcolor">//
+            code block to be executed</span></span><span style="background:white"><br>
+            </span></i><span style="background:#EEECE1">}</span><br>
+            <span class="javakeywordcolor"><span style="background:#EEECE1">while</span></span><span style="background:#EEECE1">&nbsp;(<em><span style="font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi">condition</span></em>);</span><span style="background:white"><o:p></o:p></span></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            background:white"><o:p></o:p></span></p>
+            <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228;background:#EEECE1"><o:p>&nbsp;</o:p></span></span></p>
+        </div>
+        <br>
+        <div class="code1">
+
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">#include &lt;iostream&gt;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">#include &lt;string&gt;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">using namespace std;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">int main ()<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">{<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><span style="mso-spacerun:yes">&nbsp; </span>string str;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><span style="mso-spacerun:yes">&nbsp; </span>do {<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cout</span>
+            &lt;&lt; </span><span style="font-size:10.0pt;font-family:Inconsolata;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+            color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">"Enter text: "</span><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">getline</span>
+            (<span class="SpellE"><span class="GramE">cin,str</span></span>);<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cout</span>
+            &lt;&lt; </span><span style="font-size:10.0pt;font-family:Inconsolata;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+            color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">"You entered: "</span><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"> &lt;&lt; str &lt;&lt; </span><span style="font-size:10.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">'\n'</span><span style="font-size:12.0pt;font-family:Inconsolata;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+            color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><span style="mso-spacerun:yes">&nbsp; </span>} while (str != </span><span style="font-size:10.0pt;font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">"goodbye"</span><span style="font-size:12.0pt;font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-bidi-font-family:&quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">);<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+            background:#EEECE1;vertical-align:baseline"><span style="font-size:12.0pt;
+            font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+            &quot;Courier New&quot;;color:#4F6228;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">}</span><span style="font-size:12.0pt;font-family:Inconsolata;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+            color:#4F6228"><o:p></o:p></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <br>
+        <div class="output2"><br>
+            <p style="padding-left:10px ;"> Output:</p>
+            <p>Enter text: hello <br>
+                You entered: hello <br>
+                Enter text: who's there? <br>
+                You entered: who's there? <br>
+                Enter text: goodbye <br>
+                You entered: goodbye <br>
+            </p>
+
+            <br>
+        </div>
+        <br><hr><br>
+        <h2 style="text-decoration:underline;">for loop</h2>
+        <p>Like the while-loop, this loop repeats statement while condition is true. But, in addition, the for loop provides specific locations to contain an initialization and an increase expression, executed before the loop begins the first time, and after each iteration, respectively. Therefore, it is especially useful to use counter variables as condition.</p>
+        <p style="text-decoration:underline;" ><strong>It works in the following way:</strong></p>
+        <ol>
+            <li>initialization is executed. Generally, this declares a counter variable, and sets it to some initial value. This is executed a single time, at the beginning of the loop.</li>
+            <li>condition is checked. If it is true, the loop continues; otherwise, the loop ends, and statement is skipped, going directly to step 5.</li>
+            <li>statement is executed. As usual, it can be either a single statement or a block enclosed in curly braces { }.</li>
+            <li>increase is executed, and the loop gets back to step 2.</li>
+            <li>the loop ends: execution continues by the next statement after it.</li>
+        </ol>
+        <div class="syntax" ><p>Syntax</p></div>
+        <div class="syntax1">
+
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">for
+            (initialization; condition; increase)<o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span class="GramE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">{ statement</span></span><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">1;<o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span>statement2;<o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span>... <o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span class="SpellE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">statementN</span></span><span class="GramE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228">; }</span></span><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <br>
+        <p >The fields in the header of a for loop are optional and can be left blank, but the semicolons cannot be omitted. When the condition is omitted, it always evaluates to true.</p>
+        <br>
+        <div class="code1">
+
+            <p class="code1" style="background:#EEECE1"><span style="font-size:18.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="code1" style="tab-stops:61.05pt;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
+            minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;background:#EEECE1">for</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;background:#EEECE1">&nbsp;(<span class="javakeywordcolor">int</span>&nbsp;<span class="SpellE">i</span> =&nbsp;<span class="javanumbercolor">0</span>; <span class="SpellE">i</span> &lt;&nbsp;<span class="javanumbercolor">5</span>; <span class="SpellE">i</span>++) {<br>
+            &nbsp; <span class="SpellE">cout</span> &lt;&lt; <span class="SpellE">i</span>
+            &lt;&lt;&nbsp;<span class="javastringcolor">" "</span>;</span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228"><br>
+            <span style="background:#EEECE1">}<o:p></o:p></span></span></p>
+            
+            <p class="code1" style="tab-stops:61.05pt;background:#EEECE1"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+            minor-bidi;color:#4F6228;background:white"><o:p></o:p></span></p>
+            
+        </div>
+        <div class="output1">
+
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;</span>Output:<o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>0 1
+            2 3 4<o:p></o:p></span></p>
+            
+            <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+            <iframe width="100%" height="400"
+            src="https://www.youtube.com/embed/YjiSuzc2pAM" frameborder="0" style="border-radius: 5px; text-align: center;">
+            </iframe>
+        </div>
+        <br>
+        <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+            <iframe width="100%" height="400"
+            src="https://www.youtube.com/embed/cgpgpGuXIZk" frameborder="0" style="border-radius: 5px; text-align: center;">
+            </iframe>
+        </div>
+        <div class="topic">
+            <p>Another topic:</p>
+             <ol>
+                <li><a href="https://www.geeksforgeeks.org/for_each-loop-c/" target="_blank" >for_each loop in C++</a></li>
+                
+            </ol>
+        </div>
+
+        <div class="problem">
+            <p style="text-align: center;">Problems</p>
+             <ul>
+                <li><a href="https://codeforces.com/problemset/problem/1353/B" target="_blank">problem 1</a></li>
+                <li><a href="https://codeforces.com/problemset/problem/1213/B" target="_blank">problem 2</a></li>
+            </ul>
+        </div>
+        <div class="next_lesson">
+            <div class="previous"><a href="controlflow1.html">&lt;&lt; previous</a></div>
+            <div class="next"><a href="controlflow3.html">next &gt;&gt;</a></div>
+        </div>
+        <div class="next_topic">
+            <div class="previous" ><a href="intro_l1.html">&lt;&lt; previous</a></div>
+            <div class="mid">topic</div>
+            <div class="next"><a href="funcations.html">next &gt;&gt;</a></div>
+        </div>
+    </div>
+</div>
+<!-- end body -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+        <div class="icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </div>
+</div>
+<!-- end footer -->
+        
+
+</body>
