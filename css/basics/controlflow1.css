@@ -151,7 +151,8 @@ body {
 .body .container {
     padding: 10px 117px;
 }
-.body .container .syntax{
+
+.body .container .syntax {
     background-color: #dddddd;
     display: inline-block;
     border-radius: 5px;
@@ -159,29 +160,34 @@ body {
 
 }
 
-.body .container .syntax:hover{
+.body .container .hsyntax:hover .syntax {
     width: 100px;
     transition: 0.5s;
-
 }
-.body .container .syntax p{
+
+.body .container .syntax p {
     padding-left: 10px;
     font-size: 20px;
     font-weight: 500;
 }
-.body .container .syntax1,.body .container .output1{ 
-    margin: 0 ;
+
+.body .container .syntax1,
+.body .container .output1 {
+    margin: 0;
     padding-top: 10px;
 
 }
-.body .container .syntax1 p{
+
+.body .container .syntax1 p {
     padding-left: 10px;
 }
+
 .body .container .code1 p {
     margin: 0;
     padding-left: 10px;
-    
+
 }
+
 .body .topic,
 .body .problem {
     border-radius: 10px;
