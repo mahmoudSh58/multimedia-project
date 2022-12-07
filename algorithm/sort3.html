@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radix Sort</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="../css/normalized.css">
+    <link rel="stylesheet" href="../css/algorithm/sort3.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <img src="../image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1 class="topic">Sort Algorithms</h1>
+            <h1 class="lesson"> lesson 3: Radix Sort </h1>
+            
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+    <div class="container">
+        <p>Radix sort is a sorting algorithm that sorts the elements by first grouping the individual digits of the same place value. Then, sort the elements according to their increasing/decreasing order. Suppose, we have an array of 8 elements. First, we will sort elements based on the value of the unit place. Then, we will sort elements based on the value of the tenth place. This process goes on until the last significant place.</p>
+        <ul>
+            <li>
+                <p>Let the initial array be [121, 432, 564, 23, 1, 45, 788]. It is sorted according to radix sort as shown in the figure below.</p>
+            </li>
+        </ul>
+                <img src="../image/radix1.png" alt="initial array">
+                <p class="description">Working of Radix Sort</p>
+                <div class="note">
+                    <p>Please go through the counting sort before reading this article because counting sort is used as an intermediate sort in radix sort.</p>
+                </div>
+                <h2 style="text-decoration:underline;">Working of Radix Sort</h2>
+                    <ol>
+                        <li>
+                            <p>Find the largest element in the array, i.e. max. Let X be the number of digits in max. X is calculated because we have to go through all the significant places of all elements. In this array [121, 432, 564, 23, 1, 45, 788], we have the largest number 788. It has 3 digits. Therefore, the loop should go up to hundreds place (3 times).</p>
+                            
+                        </li>
+                        <li>
+                            <p>Now, go through each significant place one by one. Use any stable sorting technique to sort the digits at each significant place. We have used counting sort for this. Sort the elements based on the unit place digits (X=0). </p>
+                            <img src="../image/radix2.png" alt="step2">
+                            <p class="description" style="padding-left:450px ;">Using counting sort to sort elements based on unit place</p>
+                        </li>
+                        <li>
+                            <p>Now, sort the elements based on digits at tens place.</p>
+                            <img src="../image/radix3.png" alt="step3">
+                            <p class="description" style="padding-left:500px ;">Sort elements based on tens place</p>
+                        </li>
+                        <li>
+                            <p>Finally, sort the elements based on the digits at the hundreds place.</p>
+                            <img src="../image/radix4.png" alt="step3">
+                            <p class="description" style="padding-left:500px ;">Sort elements based on hundreds place</p>
+                        </li>
+                    </ol>
+                    <br><hr><br>
+                    <div class="code1">
+
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">#include
+                        &lt;iostream&gt;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">using
+                        namespace std;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">//
+                        Function to get the largest element from an array<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">int
+                        <span class="SpellE"><span class="GramE">getMax</span></span><span class="GramE">(</span>int
+                        array[], int n) {<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int max = <span class="GramE">array[</span>0];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int <span class="SpellE">i</span> = 1; <span class="SpellE">i</span> &lt; n; <span class="SpellE">i</span>++)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if (array[<span class="SpellE">i</span>] &gt;
+                        max)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>max = array[<span class="SpellE">i</span>];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>return max;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">}<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">//
+                        Using counting sort to sort the elements in the basis of significant places<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">void
+                        <span class="SpellE"><span class="GramE">countingSort</span></span><span class="GramE">(</span>int array[], int size, int place) {<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>const int max = 10;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int output[size];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int count[max];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int <span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt; max; ++<span class="SpellE">i</span>)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>count[<span class="SpellE">i</span>] = 0;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>// Calculate count of elements<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int <span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt; size; <span class="SpellE">i</span>++)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>count[(array[<span class="SpellE">i</span>] /
+                        place) % <span class="GramE">10]+</span>+;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>// Calculate cumulative count<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int <span class="SpellE">i</span> = 1; <span class="SpellE">i</span> &lt; max; <span class="SpellE">i</span>++)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>count[<span class="SpellE">i</span>] += <span class="GramE">count[</span><span class="SpellE">i</span> - 1];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>// Place the elements in sorted order<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int <span class="SpellE">i</span> = size -
+                        1; <span class="SpellE">i</span> &gt;= 0; <span class="SpellE">i</span>--) {<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>output[count[(array[<span class="SpellE">i</span>]
+                        / place) % 10] - 1] = array[<span class="SpellE">i</span>];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>count[(array[<span class="SpellE">i</span>] /
+                        place) % <span class="GramE">10]--</span>;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>}<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int <span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt; size; <span class="SpellE">i</span>++)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>array[<span class="SpellE">i</span>] =
+                        output[<span class="SpellE">i</span>];<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">}<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">//
+                        Main function to implement radix sort<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">void
+                        <span class="SpellE"><span class="GramE">radixsort</span></span><span class="GramE">(</span>int
+                        array[], int size) {<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>// Get maximum element<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int max = <span class="SpellE"><span class="GramE">getMax</span></span><span class="GramE">(</span>array, size);<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>// Apply counting sort to sort elements based
+                        on place value.<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (int place = 1; max / place &gt; 0; place
+                        *= 10)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">countingSort</span></span><span class="GramE">(</span>array, size, place);<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">}<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">//
+                        Print an array<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">void
+                        <span class="SpellE"><span class="GramE">printArray</span></span><span class="GramE">(</span>int
+                        array[], int size) {<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int <span class="SpellE">i</span>;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>for (<span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt; size; <span class="SpellE">i</span>++)<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cout</span> &lt;&lt;
+                        array[<span class="SpellE">i</span>] &lt;&lt; " ";<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">cout</span> &lt;&lt; <span class="SpellE">endl</span>;<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">}<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">//
+                        Driver code<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">int
+                        <span class="GramE">main(</span>) {<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int <span class="GramE">array[</span>] = {121,
+                        432, 564, 23, 1, 45, 788};<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int n = <span class="SpellE">sizeof</span>(array)
+                        / <span class="SpellE">sizeof</span>(<span class="GramE">array[</span>0]);<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE"><span class="GramE">radixsort</span></span><span class="GramE">(</span>array, n);<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="tab-stops:right 15.2in;background:#EEECE1"><span style="font-size:14.0pt;line-height:106%;font-family:&quot;Times New Roman&quot;,serif;
+                        mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+                        major-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE"><span class="GramE">printArray</span></span><span class="GramE">(</span>array,
+                        n);<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228">}<o:p></o:p></span></p>
+                        
+                        <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                        line-height:106%;font-family:&quot;Times New Roman&quot;,serif;mso-ascii-theme-font:major-bidi;
+                        mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                        
+                    </div>
+           
+        <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+            <iframe width="100%" height="500"
+            src="https://www.youtube.com/embed/XiuSW_mEn7g" frameborder="0" style="border-radius: 5px; text-align: center;">
+            </iframe>
+        </div>
+        <div class="problem">
+            <p style="text-align: center;">Problems</p>
+             <ul>
+                <li><a href="https://codeforces.com/problemset/problem/1773/E" target="_blank">problem 1</a></li>
+                <li><a href="https://codeforces.com/problemset/problem/1760/C" target="_blank">problem 2</a></li>
+            </ul>
+        </div>
+        <div class="next_lesson">
+            <div class="previous" ><a href="sort2.html">&lt;&lt; previous</a></div>
+            <div class="next"><a href="sort4.html">next &gt;&gt;</a></div>
+        </div>
+        <div class="next_topic">
+            <div class="previous" ><a href="gcd_lcm.html">&lt;&lt; previous</a></div>
+            <div class="mid">topic</div>
+            <div class="next" style="visibility: hidden; "><a href="funcations.html">next &gt;&gt;</a></div>
+        </div>
+    </div>
+    </div>
+    <!-- end body -->
+    <!-- footer -->
+    <div class="footer">
+    <div class="container">
+        <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+        <div class="icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </div>
+    </div>
+    <!-- end footer -->
+        
+       </div>
+    </div>
+    </body>    
