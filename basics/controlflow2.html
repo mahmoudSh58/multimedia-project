@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../css/normalized.css">
     <link rel="stylesheet" href="../css/basics/controlflow2.css">
     <link rel="stylesheet" href="../css/all.min.css">
+    <link rel = "icon" type = "image/svg" href = "../image/icon.svg">
 </head>
 <body>
      <!-- header -->
@@ -65,23 +66,25 @@
         <p>Loops can execute a block of code as long as a specified condition is reached. Loops are handy because they save time, reduce errors, and they make code more readable.</p>
         <h2 style="text-decoration:underline;">The while loop</h2>
         <p>The simplest kind of loop is the while-loop</p>
-        <div class="syntax" ><p>Syntax</p></div>
-        <div class="syntax1">
+        <div class="hsyntax">
+            <div class="syntax" ><p>Syntax</p></div>
+            <div class="syntax1">
 
-            <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span class="javakeywordcolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">while</span></span><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:
-            Consolas;color:#4F6228">&nbsp;(</span></span><em><span style="font-size:11.5pt;
-            line-height:107%;font-family:Consolas;mso-bidi-font-family:Arial;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228">condition</span></em><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">)
-            {</span></span><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;
-            color:#4F6228"><br>
-            <span class="javacolor"><i>&nbsp;&nbsp;</i></span><span class="commentcolor"><i>//
-            code block to be executed</i></span><br>
-            <span style="background:#EEECE1"><span style="mso-spacerun:yes">&nbsp; </span>}</span><span style="background:white"><o:p></o:p></span></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
-            
+                <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span class="javakeywordcolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">while</span></span><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:
+                Consolas;color:#4F6228">&nbsp;(</span></span><em><span style="font-size:11.5pt;
+                line-height:107%;font-family:Consolas;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228">condition</span></em><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">)
+                {</span></span><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;
+                color:#4F6228"><br>
+                <span class="javacolor"><i>&nbsp;&nbsp;</i></span><span class="commentcolor"><i>//
+                code block to be executed</i></span><br>
+                <span style="background:#EEECE1"><span style="mso-spacerun:yes">&nbsp; </span>}</span><span style="background:white"><o:p></o:p></span></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                
+            </div>
         </div>
         <br>
         <div class="code1">
@@ -125,34 +128,38 @@
         <br><hr><br>
         <h2 style="text-decoration:underline;">The Do/While Loop</h2>
         <p>The <strong>do/while</strong> loop is a variant of the <strong>while</strong> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true</p>
-        <div class="syntax" ><p>Syntax</p></div>
-        <div class="syntax1">
+        
+        <div class="hsyntax">
+        
+            <div class="syntax" ><p>Syntax</p></div>
+            <div class="syntax1">
 
-            <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228;background:#EEECE1"><o:p>&nbsp;</o:p></span></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228;background:#EEECE1">do</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228;background:#EEECE1">&nbsp;{</span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228"><br>
-            <i><span style="background:#EEECE1">&nbsp;&nbsp;<span class="commentcolor">//
-            code block to be executed</span></span><span style="background:white"><br>
-            </span></i><span style="background:#EEECE1">}</span><br>
-            <span class="javakeywordcolor"><span style="background:#EEECE1">while</span></span><span style="background:#EEECE1">&nbsp;(<em><span style="font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi">condition</span></em>);</span><span style="background:white"><o:p></o:p></span></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
-            background:white"><o:p></o:p></span></p>
-            <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
                 mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
                 minor-bidi;color:#4F6228;background:#EEECE1"><o:p>&nbsp;</o:p></span></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228;background:#EEECE1">do</span></span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228;background:#EEECE1">&nbsp;{</span><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228"><br>
+                <i><span style="background:#EEECE1">&nbsp;&nbsp;<span class="commentcolor">//
+                code block to be executed</span></span><span style="background:white"><br>
+                </span></i><span style="background:#EEECE1">}</span><br>
+                <span class="javakeywordcolor"><span style="background:#EEECE1">while</span></span><span style="background:#EEECE1">&nbsp;(<em><span style="font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi">condition</span></em>);</span><span style="background:white"><o:p></o:p></span></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+                background:white"><o:p></o:p></span></p>
+                <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                    minor-bidi;color:#4F6228;background:#EEECE1"><o:p>&nbsp;</o:p></span></span></p>
+            </div>
         </div>
         <br>
         <div class="code1">
@@ -289,44 +296,47 @@
             <li>increase is executed, and the loop gets back to step 2.</li>
             <li>the loop ends: execution continues by the next statement after it.</li>
         </ol>
-        <div class="syntax" ><p>Syntax</p></div>
-        <div class="syntax1">
 
-            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">for
-            (initialization; condition; increase)<o:p></o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span class="GramE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228">{ statement</span></span><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">1;<o:p></o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span>statement2;<o:p></o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span>... <o:p></o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span class="SpellE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228">statementN</span></span><span class="GramE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228">; }</span></span><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p></o:p></span></p>
-            
-            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
-            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
-            
+        <div class="hsyntax">
+            <div class="syntax" ><p>Syntax</p></div>
+            <div class="syntax1">
+
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">for
+                (initialization; condition; increase)<o:p></o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span class="GramE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228">{ statement</span></span><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">1;<o:p></o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span>statement2;<o:p></o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span>... <o:p></o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span class="SpellE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228">statementN</span></span><span class="GramE"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228">; }</span></span><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p></o:p></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                
+            </div>
         </div>
         <br>
         <p >The fields in the header of a for loop are optional and can be left blank, but the semicolons cannot be omitted. When the condition is omitted, it always evaluates to true.</p>

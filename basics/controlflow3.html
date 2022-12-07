@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../css/normalized.css">
     <link rel="stylesheet" href="../css/basics/controlflow2.css">
     <link rel="stylesheet" href="../css/all.min.css">
+    <link rel = "icon" type = "image/svg" href = "../image/icon.svg">
 </head>
 <body>
     <!--start header -->
@@ -64,69 +65,72 @@
 <div class="body">
     <div class="container">
         <p>The syntax of the switch statement is a bit peculiar. Its purpose is to check for a value among a number of possible constant expressions. It is something similar to concatenating if-else statements, but limited to constant expressions</p>
-        <div class="syntax" ><p>Syntax</p></div>
-        <div class="syntax1">
+        
+        <div class="hsyntax">
+            <div class="syntax" ><p>Syntax</p></div>
+            <div class="syntax1">
 
-            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
-            0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
-            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
-            font-weight:normal"><o:p>&nbsp;</o:p></span></span></p>
-            
-            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
-            0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
-            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
-            font-weight:normal">switch</span></span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
-            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:
-            major-fareast;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-            color:#4F6228;font-weight:normal">(</span></span><em><span style="font-size:
-            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
-            font-weight:normal">expression</span></em><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
-            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:
-            major-fareast;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-            color:#4F6228;font-weight:normal">) {</span></span><span style="font-size:14.0pt;
-            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
-            minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal"><br>
-            </span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
-            mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
-            mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;&nbsp;</span></span><span class="javakeywordcolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228;font-weight:normal">case</span></span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
-            mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
-            mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;x:</span></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
-            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-            color:#4F6228;font-weight:normal"><br>
-            </span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
-            mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
-            mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="commentcolor"><i><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228;font-weight:normal">// code block</span></i></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
-            minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
-            color:#4F6228;font-weight:normal"><br>
-            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeywordcolor">break</span>;</span><br>
-            <span style="background:#EEECE1">&nbsp;&nbsp;<span class="javakeywordcolor">case</span>&nbsp;y:</span><br>
-            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;<span class="javanumbercolor">&nbsp;</span><span class="commentcolor"><i>// code block</i></span></span><br>
-            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeywordcolor">break</span>;</span><br>
-            <span style="background:#EEECE1">&nbsp;&nbsp;<span class="javakeywordcolor">default</span>:</span><br>
-            <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;<span class="javanumbercolor">&nbsp;</span><span class="commentcolor"><i>// code block</i></span></span><br>
-            <span style="background:#EEECE1">}<o:p></o:p></span></span></p>
-            
-            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
-            0in;background:#EEECE1"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
-            mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
-            minor-bidi;color:#4F6228;background:white;font-weight:normal"><o:p></o:p></span></p>
-            <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
-            0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
-            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
-            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
-            font-weight:normal"><o:p>&nbsp;</o:p></span></span></p>
-            
-            
+                <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+                0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
+                14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+                font-weight:normal"><o:p>&nbsp;</o:p></span></span></p>
+                
+                <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+                0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
+                14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+                font-weight:normal">switch</span></span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+                minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:
+                major-fareast;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+                color:#4F6228;font-weight:normal">(</span></span><em><span style="font-size:
+                14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+                font-weight:normal">expression</span></em><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+                minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:
+                major-fareast;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+                color:#4F6228;font-weight:normal">) {</span></span><span style="font-size:14.0pt;
+                font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:
+                minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal"><br>
+                </span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+                mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
+                mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;&nbsp;</span></span><span class="javakeywordcolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228;font-weight:normal">case</span></span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+                mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
+                mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;x:</span></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+                minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+                color:#4F6228;font-weight:normal"><br>
+                </span><span class="javacolor"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+                mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:minor-bidi;
+                mso-bidi-theme-font:minor-bidi;color:#4F6228;font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="commentcolor"><i><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228;font-weight:normal">// code block</span></i></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+                minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+                color:#4F6228;font-weight:normal"><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeywordcolor">break</span>;</span><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;<span class="javakeywordcolor">case</span>&nbsp;y:</span><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;<span class="javanumbercolor">&nbsp;</span><span class="commentcolor"><i>// code block</i></span></span><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeywordcolor">break</span>;</span><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;<span class="javakeywordcolor">default</span>:</span><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;&nbsp;<span class="javanumbercolor">&nbsp;</span><span class="commentcolor"><i>// code block</i></span></span><br>
+                <span style="background:#EEECE1">}<o:p></o:p></span></span></p>
+                
+                <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+                0in;background:#EEECE1"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228;background:white;font-weight:normal"><o:p></o:p></span></p>
+                <p style="margin-top:0;margin-right:0in;margin-bottom:0;margin-left:
+                0in;background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:
+                14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+                font-weight:normal"><o:p>&nbsp;</o:p></span></span></p>
+                
+                
+            </div>
         </div>
         <br>
         <p>The expression present in the parentheses following the switch keyword is evaluated against multiple cases, searching for the first equality between the expression and the constants. If none of the cases match, the default one (if it exists, since it is optional) is executed. It is important to keep in mind that the order of evaluation is sequential, and as soon as one of the constants matches, the corresponding group of statements are executed. The break keyword prevents them from further execution. If the break keyword is not included, all statements following the case, including the ones under different labels, are also executed.</p>

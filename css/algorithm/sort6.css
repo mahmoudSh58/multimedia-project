@@ -152,42 +152,33 @@ body {
     padding: 10px 117px;
 }
 
-.body .container .syntax {
-    background-color: #dddddd;
-    display: inline-block;
-    border-radius: 5px;
-    width: 10px;
-
-}
-
-.body .container .hsyntax:hover .syntax {
-    width: 100px;
-    transition: 0.5s;
-
-}
-
-.body .container .syntax p {
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.body .container .syntax1,
-.body .container .output1 {
-    margin: 0;
-    padding-top: 10px;
+.body .container ol li img,
+.body .container ol li .description {
     display: block;
-
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 15px;
 }
 
-.body .container .syntax1 p {
-    padding-left: 10px;
+.body .container ol li img {
+    margin-bottom: 0;
 }
 
-.body .container .code1 p {
-    margin: 0;
-    padding-left: 10px;
-    padding-bottom: 0;
+.body .container ol li .description {
+    padding-left: 500px;
+    margin-top: -7px;
+    font-size: 12px;
+    margin-bottom: 28px;
+}
+
+.body .container .code p,
+.code2 p {
+    margin: 0px;
+}
+
+.body .container .code2 {
+    margin-top: 20px;
 }
 
 .body .topic,
