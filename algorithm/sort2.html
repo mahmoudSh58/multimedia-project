@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserstion Sort</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="../css/normalized.css">
+    <link rel="stylesheet" href="../css/algorithm/sort2.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel = "icon" type = "image/svg" href = "../image/icon.svg">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <img src="../image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1 class="topic">Sort Algorithms</h1>
+            <h1 class="lesson"> lesson 2: Inserstion Sort</h1>
+            
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+    <div class="container">
+        <p>This is an in-place comparison-based sorting algorithm. Here, a sub-list is maintained which is always sorted. For example, the lower part of an array is maintained to be sorted. An element that is to be 'inserted in this sorted sub-list, has to find its appropriate place, and then it has to be inserted there. Hence the name, insertion sort. The array is searched sequentially and unsorted items are moved and inserted into the sorted sub-list (in the same array). This algorithm is not suitable for large data sets as its average and worst-case complexity is Ο(n2), where n is the number of items.</p>
+        <h2 style="text-decoration:underline;">Working of Insertion Sort</h2>
+        <p>Suppose we need to sort the following array.</p>
+        <img class="array" src="../image/inserstion1.png" alt="array">
+        <p class="description1">Initial array</p>
+        <ol>
+            <li>
+                <p>
+                    The first element in the array is assumed to be sorted. Take the second element and store it separately in key. Compare key with the first element. If the first element is greater than key, then key is placed in front of the first element.
+                </p>
+                <img src="../image/inserstion2.png" alt="step1">
+                <p class="description" style="padding-left:150px ;">If the first element is greater than key, then key is placed in front of the first element.</p>
+            </li>
+            <li>
+                <p>
+                    Now, the first two elements are sorted.Take the third element and compare it with the elements on the left of it. Placed it just behind the element smaller than it. If there is no element smaller than it, then place it at the beginning of the array.
+                </p>
+                <img src="../image/inserstion3.png" alt="step2">
+                <p class="description" >Place 1 at the beginning</p>
+            </li>
+            <li>
+                <p>
+                    Similarly, place every unsorted element at its correct position.
+                </p>
+                <img src="../image/inserstion4.png" alt="step3">
+                <p class="description" >Place 4 behind 1</p>
+            </li>
+                
+        </ol>
+        <img class="array" src="../image/inserstion5.png" alt="step4">
+        <p class="description1" >Place 3 behind 1 and the array is sorted</p>
+        <br> <hr> <br>
+        <div class="code1">
+
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">// C++ program for insertion sort</span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">#include &lt;bits/<span class="SpellE">stdc</span>++.h&gt;</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">using</span></b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"> <b><span style="border:none windowtext 1.0pt;mso-border-alt:
+            none windowtext 0in;padding:0in">namespace</span></b> <span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">std;</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">// Function to sort an array using</span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">// insertion sort</span><span style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">void</span></b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"> <span class="SpellE"><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">insertionSort</span></span><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">(<b>int</b></span> <span class="SpellE"><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">arr</span></span><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">[], <b>int</b></span> <span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">n)</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">{</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>int</b></span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span class="SpellE"><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">i</span></span><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">, key, j;</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>for</b></span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">(<span class="SpellE">i</span> = 1; <span class="SpellE">i</span> &lt;
+            n; <span class="SpellE">i</span>++)</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;{</span><span style="font-size:14.0pt;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = <span class="SpellE">arr</span>[<span class="SpellE">i</span>];</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = <span class="SpellE">i</span> - 1;</span><span style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt">&nbsp;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Move elements
+            of <span class="SpellE"><span class="GramE">arr</span></span><span class="GramE">[</span>0..i-1],&nbsp;</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// that are
+            greater than key, to one</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// position ahead
+            of <span class="GramE">their</span></span><span style="font-size:14.0pt;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// current
+            position</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>while</b></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">(j &gt;= 0 &amp;&amp; <span class="SpellE">arr</span>[j] &gt; key)</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE"><span class="GramE">arr</span></span><span class="GramE">[</span>j +
+            1] = <span class="SpellE">arr</span>[j];</span><span style="font-size:14.0pt;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j
+            = j - 1;</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE"><span class="GramE">arr</span></span><span class="GramE">[</span>j +
+            1] = key;</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;}</span><span style="font-size:14.0pt;
+            font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">}</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">// A utility function to print an array</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">// of size n</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">void</span></b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"> <span class="SpellE"><span class="GramE"><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">printArray</span></span></span><span class="GramE"><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">(</span></span><b><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">int</span></b> <span class="SpellE"><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">arr</span></span><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">[], <b>int</b></span> <span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">n)</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">{</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>int</b></span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span class="SpellE"><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">i</span></span><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">;</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>for</b></span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">(<span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt;
+            n; <span class="SpellE">i</span>++)</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE">cout</span> &lt;&lt; <span class="SpellE">arr</span>[<span class="SpellE">i</span>] &lt;&lt; " ";</span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE">cout</span> &lt;&lt; <span class="SpellE">endl</span>;</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">}</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">// Driver code</span><span style="font-size:14.0pt;font-family:
+            &quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:
+            &quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;
+            color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">int</span></b><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"> <span class="GramE"><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">main(</span></span><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">)</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">{</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>int</b></span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span class="SpellE"><span class="GramE"><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">arr</span></span></span><span class="GramE"><span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">[</span></span><span style="border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in">] = { 12, 11, 13, 5, 6 };</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>int</b></span><span style="font-size:
+            14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">N = <span class="SpellE"><b>sizeof</b></span>(<span class="SpellE">arr</span>)
+            / <span class="SpellE"><b>sizeof</b></span>(<span class="SpellE"><span class="GramE">arr</span></span><span class="GramE">[</span>0]);</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt">&nbsp;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE"><span class="GramE">insertionSort</span></span><span class="GramE">(</span><span class="SpellE">arr</span>, N);</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<span class="SpellE"><span class="GramE">printArray</span></span><span class="GramE">(</span><span class="SpellE">arr</span>, N);</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt">&nbsp;<o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b></span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:
+            minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#4F6228;letter-spacing:.1pt"> <span style="border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">0;</span><o:p></o:p></span></p>
+            
+            <p class="code1" style="margin-bottom:0in;line-height:14.4pt;background:#EEECE1;
+            vertical-align:baseline"><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in">}</span><span style="font-size:14.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+            letter-spacing:.1pt"><o:p></o:p></span></p>
+            
+            <p class="code1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+        </div>
+        <br>
+        <div class="output1">
+
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#948A54;letter-spacing:.1pt;border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in;background:white"><o:p></o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#948A54;letter-spacing:.1pt;border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in;background:#F2F2F2"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>Output:</span></b><b><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in;background:white"><o:p></o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><b><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-theme-font:minor-bidi;
+            mso-bidi-theme-font:minor-bidi;color:#948A54;letter-spacing:.1pt;border:none windowtext 1.0pt;
+            mso-border-alt:none windowtext 0in;padding:0in;background:#F2F2F2"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5 6 11 12 13</span></b><b><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+            mso-ascii-theme-font:minor-bidi;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54;
+            letter-spacing:.1pt;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
+            padding:0in;background:white"><o:p></o:p></span></b></p>
+            
+            <p class="output1" style="background:#F2F2F2"><o:p>&nbsp;</o:p></p>
+            
+     
+    <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+        <iframe width="100%" height="400"
+        src="https://www.youtube.com/embed/OGzPmgsI-pQ" frameborder="0" style="border-radius: 5px; text-align: center;">
+        </iframe>
+    </div>
+    <!-- <div class="topic">
+        <p>Another topic:</p>
+         <ol>
+            <li><a href="https://www.geeksforgeeks.org/median-and-mode-using-counting-sort/?ref=rp" target="_blank" >Median and Mode using Counting Sort</a></li>
+            
+        </ol>
+    </div> -->
+
+    <div class="problem">
+        <p style="text-align: center;">Problems</p>
+         <ul>
+            <li><a href="https://www.hackerrank.com/challenges/insertionsort1/problem" target="_blank">problem 1</a></li>
+            <li><a href="https://www.hackerrank.com/challenges/insertionsort2/problem" target="_blank">problem 2</a></li>
+        </ul>
+    </div>
+    <div class="next_lesson">
+        <div class="previous" ><a href="sort1.html">&lt;&lt; previous</a></div>
+        <div class="next"><a href="sort3.html">next &gt;&gt;</a></div>
+    </div>
+    <div class="next_topic">
+        <div class="previous" ><a href="gcd_lcm.html">&lt;&lt; previous</a></div>
+        <div class="mid">topic</div>
+        <div class="next" style="visibility: hidden; "><a href="funcations.html">next &gt;&gt;</a></div>
+    </div>
+</div>
+</div>
+<!-- end body -->
+<!-- footer -->
+<div class="footer">
+<div class="container">
+    <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+    <div class="icon">
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-telegram"></i></a>
+    </div>
+</div>
+</div>
+<!-- end footer -->
+    
+   </div>
+</div>
+</body>    

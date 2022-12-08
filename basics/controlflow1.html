@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Control</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="../css/normalized.css">
+    <link rel="stylesheet" href="../css/basics/controlflow1.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel = "icon" type = "image/svg" href = "../image/icon.svg">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <img src="../image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1 class="topic">Statements and flow control</h1>
+            <h1 class="lesson"> lesson 1: Selection statements: if and else</h1>
+            
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+    <div class="container">
+        <p>In a program, it is rare to provide useful functionality by just executing a linear sequence of operations. Commonly, a program must be able to react in different ways in response to different situations or execute the same operation multiple times in different contexts. We will now see the control flow statements C++ offers to the programmer to control the sequence of operations to be executed.</p>
+        <h2 style="text-decoration:underline;">Selection statements: if and else</h2>
+        <p>C++ provides conditional execution support, where the if keyword indicates whether or not to execute the following statement or block, depending on the fulfillment of the condition provided. If you want to include more than a single statement to be executed when the condition is fulfilled, these statements shall be enclosed in braces ({}), forming a block.</p>
+        <p>If the expression named condition evaluates to true, then the statement is executed; otherwise, it will be ignored and the program will continue with the subsequent code.  Selection statements with if can also specify what happens when the condition is not fulfilled, by using the else keyword to introduce an alternative statement.</p>
+        <div class="hsyntax">
+            <div class="syntax" ><p>Syntax</p></div>
+            <div class="syntax1">
+
+                <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:mediumblue"><o:p>&nbsp;</o:p></span></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span class="javakeywordcolor"><span style="font-size:14.0pt;line-height:107%;font-family:&quot;Arial&quot;,sans-serif;
+                mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:
+                minor-bidi;color:#4F6228"><span style="mso-spacerun:yes">&nbsp;</span></span></span><span class="javakeywordcolor"><span style="font-size:11.5pt;line-height:107%;
+                font-family:Consolas;color:#4F6228">if</span></span><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;color:#4F6228">&nbsp;(</span></span><em><span style="font-size:11.5pt;line-height:107%;font-family:Consolas;mso-bidi-font-family:
+                Arial;mso-bidi-theme-font:minor-bidi;color:#4F6228">condition</span></em><span class="javacolor"><span style="font-size:11.5pt;line-height:107%;font-family:
+                Consolas;color:#4F6228">) {</span></span><span style="font-size:11.5pt;
+                line-height:107%;font-family:Consolas;color:#4F6228"><br>
+                <span class="javacolor">&nbsp;&nbsp;</span><span class="commentcolor"><i>// block
+                of code to be executed if the condition is true</i></span><br>
+                <span style="background:#EEECE1">}&nbsp;<span class="javakeywordcolor">else</span>&nbsp;{</span><br>
+                <span style="background:#EEECE1">&nbsp;&nbsp;<span class="commentcolor"><i>//
+                block of code to be executed if the condition is false</i></span><br>
+                }</span><span style="background:white"><o:p></o:p></span></span></p>
+                
+                <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228;
+                "><o:p>&nbsp;</o:p></span></p>
+                
+                <p class="syntax1"><o:p>&nbsp;</o:p></p>
+                
+            </div>
+        </div>
+        <p>Finally, we can concatenate on multiple if-else statements to produce a more complex branching logic. It is important to be aware that once one of the conditions is met, all of the ones that follow are discarded</p>
+            <div class="syntax1">
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">if
+            (condition1) {statement 1}<o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">else
+            if (condition2) {statement 2}<o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228">else
+            (condition3) {statement 3}<o:p></o:p></span></p>
+            
+            <p class="syntax1" style="background:#EEECE1"><span style="font-size:14.0pt;
+            line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+            mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+            
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="code1">
+
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228">#include
+                &lt;iostream&gt;<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228">using
+                namespace std;<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228">int <span class="GramE">main(</span>){<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>int x = 10;<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span><span class="GramE">if<span style="mso-spacerun:yes">&nbsp; </span>(</span>x &gt; 0) <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">cout</span> &lt;&lt; x
+                &lt;&lt;'\n';<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>if (x &gt; <span class="GramE">11 )</span> <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">cout</span> &lt;&lt; x
+                &lt;&lt;'\n';<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>else if (x&lt;=0<span class="GramE">) <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">cout</span></span> &lt;&lt;
+                x &lt;&lt;'\n';<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><span style="mso-spacerun:yes">&nbsp; </span>else <span class="SpellE">cout</span> &lt;&lt;
+                x-1 &lt;&lt; '\n';<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228">}<o:p></o:p></span></p>
+                
+                <p class="codel" style="background:#EEECE1"><span style="color:#4F6228"><o:p>&nbsp;</o:p></span></p>
+                
+            </div>
+            <div class="output1">
+
+                <p class="output1" style="background:#F2F2F2"><span style="color:#948A54"><o:p>&nbsp;</o:p></span></p>
+                
+                <p class="output1" style="background:#F2F2F2"><span style="color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54">Output
+                :<o:p></o:p></span></p>
+                
+                <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>10<o:p></o:p></span></p>
+                
+                <p class="output1" style="background:#F2F2F2"><span style="font-size:14.0pt;
+                line-height:107%;font-family:&quot;Arial&quot;,sans-serif;mso-ascii-theme-font:minor-bidi;
+                mso-hansi-theme-font:minor-bidi;mso-bidi-theme-font:minor-bidi;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>9<o:p></o:p></span></p>
+                
+                <p class="output1" style="background:#F2F2F2"><span style="color:#948A54"><o:p>&nbsp;</o:p></span></p>
+                
+            </div>
+            <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+                <iframe width="100%" height="400"
+                src="https://www.youtube.com/embed/F56Bo4I0GhA" frameborder="0" style="border-radius: 5px; text-align: center;">
+                </iframe>
+            </div>
+            <div class="topic">
+                <p>Another topic:</p>
+                 <ol>
+                    <li><a href="https://www.w3schools.com/cpp/cpp_conditions_shorthand.asp" target="_blank" >Short Hand If Else</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/goto-statement-in-c-cpp/" target="_blank">goto </a></li>
+                </ol>
+            </div>
+    
+            <div class="problem">
+                <p style="text-align: center;">Problems</p>
+                 <ul>
+                    <li><a href="https://codeforces.com/problemset/problem/1311/A" target="_blank">problem 1</a></li>
+                    <li><a href="https://codeforces.com/problemset/problem/1296/B" target="_blank">problem 2</a></li>
+                </ul>
+            </div>
+            <div class="next_lesson">
+                <div class="previous" style="visibility: hidden;"><a href="">&lt;&lt; previous</a></div>
+                <div class="next"><a href="controlflow2.html">next &gt;&gt;</a></div>
+            </div>
+            <div class="next_topic">
+                <div class="previous" ><a href="intro_l1.html">&lt;&lt; previous</a></div>
+                <div class="mid">topic</div>
+                <div class="next"><a href="funcations.html">next &gt;&gt;</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- end body -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+            <div class="icon">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+            
+            
+            
+            
+            </body>
+    </div>
+</div>
+    
+</body>
+</html>

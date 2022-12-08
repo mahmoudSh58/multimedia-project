@@ -113,13 +113,12 @@ body {
 /* end of header */
 /* landing */
 .landing {
-    
     top: 60px;
     left: 0;
 }
 
 .landing .container {
-    height: calc(21vh - 60px);
+    height: 120px;
     position: relative;
     width: 100%;
     color: white;
@@ -135,9 +134,16 @@ body {
 }
 
 
-.landing .container .bio h1 {
+.landing .container .bio .lesson {
     margin: 0;
-    font-size: 44px;
+    font-size: 33px;
+}
+
+.landing .container .bio .topic {
+    background-color: #bcbcbc9c;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 /* end landing */
@@ -146,60 +152,42 @@ body {
     padding: 10px 117px;
 }
 
-.body .container img ,.body .container video   {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding-top: 20px;
-    
-
-}
-
-
-.body .container .subtitle{
-    font-weight: 900;
-}
-.body .container .subtext{
-    padding-left: 20px;
-}
-.body .container .code1 p{
-    display: block;
-    padding-left: 10px;
-}
-p.MsoNormal, li.MsoNormal, div.MsoNormal {
-    mso-style-unhide: no;
-    mso-style-qformat: yes;
-    mso-style-parent: "";
-    margin-top: 0in;
-    margin-right: 0in;
-    margin-bottom: 0;
-    margin-left: 0in;
-    line-height: 107%;
-    mso-pagination: widow-orphan;
-    font-size: 11.0pt;
-    font-family: "Calibri",sans-serif;
-    mso-ascii-font-family: Calibri;
-    mso-ascii-theme-font: minor-latin;
-    mso-fareast-font-family: Calibri;
-    mso-fareast-theme-font: minor-latin;
-    mso-hansi-font-family: Calibri;
-    mso-hansi-theme-font: minor-latin;
-    mso-bidi-font-family: Arial;
-    mso-bidi-theme-font: minor-bidi;
-    padding-left: 10px;
-}
-.body .container .output2 p{
-    display: block;
-    margin: 0;
-}
-.body .container .description{
-    text-align: center;
-    font-size: 12px;
-}
-.body .container iframe{
+.body .container .syntax {
+    background-color: #dddddd;
+    display: inline-block;
     border-radius: 5px;
+    width: 10px;
+
 }
+
+.body .container .hsyntax:hover .syntax {
+    width: 100px;
+    transition: 0.5s;
+}
+
+.body .container .syntax p {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.body .container .syntax1,
+.body .container .output1 {
+    margin: 0;
+    padding-top: 10px;
+
+}
+
+.body .container .syntax1 p {
+    padding-left: 10px;
+}
+
+.body .container .code1 p {
+    margin: 0;
+    padding-left: 10px;
+
+}
+
 .body .topic,
 .body .problem {
     border-radius: 10px;
@@ -207,6 +195,7 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal {
     background-color: #f5f3ff;
     padding: 5px;
 }
+
 .problem {
     margin-top: 20px;
 }
@@ -238,6 +227,7 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal {
     text-decoration: none;
     color: white;
 }
+
 .next_lesson,
 .next_topic {
     margin-top: 30px;
@@ -265,6 +255,7 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal {
     justify-content: center;
     align-items: center;
 }
+
 .next_topic .next a {
     border-radius: 0px 10px 10px 0px;
 }
@@ -291,8 +282,8 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal {
     transform: translateX(-15px);
     transition: 0.5s;
 }
-/* end body */
 
+/* end body */
 /* footer */
 .footer {
     margin: 0;
