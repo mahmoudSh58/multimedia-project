@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+<link rel="stylesheet" href="../css/normalized.css">
+    <link rel="stylesheet" href="../css/algorithm/binarysearch.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <img src="../image/logo.svg" alt="logo">
+            <div class="links">
+                <ul>
+                    <li>
+                        <span class="header-li">Basics</span>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Flow control</a></li>
+                            <li><a href="">Functions</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Pointers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="header-li">Algorithms</span>
+                        <ul>
+                            <li><a href="">Binary search</a></li>
+                            <li><a href="">Two pointer</a></li>
+                            <li><a href="">primes</a></li>
+                            <li><a href="">Bitmask</a></li>
+                            <li><a href="">GCD&LCM</a></li>
+                            <li><a href="">Sort</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="header-li" >Problems</a></li>
+                    <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- landing -->
+<div class="landing">
+    <div class="container">
+        <div class="bio">
+            <h1 class="topic">Binary search</h1>
+            
+            
+        </div>
+    </div>
+</div>
+<!-- end landing -->
+<div class="body">
+    <div class="container">
+      <p>Binary search is a fast search algorithm with run-time complexity of Ο(log n). This search algorithm works on the principle of divide and conquer. For this algorithm to work properly, the data collection should be in the sorted form.</p>
+      <p>Binary search looks for a particular item by comparing the middle most item of the collection. If a match occurs, then the index of item is returned. If the middle item is greater than the item, then the item is searched in the sub-array to the left of the middle item. Otherwise, the item is searched for in the sub-array to the right of the middle item. This process continues on the sub-array as well until the size of the subarray reduces to zero. Binary search can be implemented only on a sorted list of items. If the elements are not sorted already, we need to sort them first.</p>
+      <h2 style="text-decoration:underline;">Binary Search Working</h2>
+      <p>Binary Search Algorithm can be implemented in two ways which are discussed below.</p>
+      <ul>
+        <li>Iterative Method</li>
+        <li>Recursive Method</li>
+      </ul>
+      <p>The recursive method follows the divide and conquer approach.
+        The general steps for both methods are discussed below.
+      </p>
+      <ol>
+        <li>
+            <p>The array in which searching is to be performed is:</p>
+            <img src="../image/binary-search-1.webp" alt="Initial array">
+            <p class="description">Initial array</p>
+        </li>
+        <p>Let x = 4 be the element to be searched.</p>
+        <li>
+            <p>Set two pointers low and high at the lowest and the highest positions respectively.</p>
+            <img src="../image/binary-search-2.webp" alt="Setting pointers">
+            <p class="description">Setting pointers</p>
+        </li>
+        <li>
+            <p>Find the middle element mid of the array ie. arr[(low + high)/2] = 6.</p>
+            <img src="../image/binary-search-3.webp" alt="Mid element">
+            <p class="description">Mid element</p>
+        </li>
+        <li><p>If x == mid, then return mid.Else, compare the element to be searched with m.</p></li>
+        <li><p>If x > mid, compare x with the middle element of the elements on the right side of mid. This is done by setting low to low = mid + 1.</p></li>
+        <li>
+            <p>Else, compare x with the middle element of the elements on the left side of mid. This is done by setting high to high = mid - 1.</p>
+            <img src="../image/binary-search-4.webp" alt="Finding mid element">
+            <p class="description">Finding mid element</p>
+        </li>
+        <li>
+            <p>Repeat steps 3 to 6 until low meets high.</p>
+            <img src="../image/binarysearch5.png" alt="Mid element" class="img5">
+            <p class="description">Mid element</p>
+        </li>
+        <li>
+            <p>x = 4 is found.</p>
+            <img src="../image/binary-search-6.webp" alt="Found" class="img5">
+            <p class="description" >Found</p>
+        </li>
+
+      </ol>
+      <br><hr><br>
+      <h2 style="text-decoration:underline;">Binary Search Algorithm</h2>
+      <h3>Iteration Method</h3>
+      <div class="algorithm">
+
+        <div style="mso-element:para-border-div;border:solid #D3DCE6 1.0pt;mso-border-alt:
+        solid #D3DCE6 .75pt;padding:12.0pt 12.0pt 12.0pt 12.0pt;background:#F2F2F2">
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54">do until the pointers low and high meet each
+        other.<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>mid =
+        (low + high)/2<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if (x ==
+        <span class="SpellE">arr</span>[mid])<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>return mid<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>else if
+        (x &gt; <span class="SpellE">arr</span>[mid]) // x is on the right side<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>low
+        = mid + 1<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+        </span>else<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// x is
+        on the left side<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>high
+        = mid - 1<o:p></o:p></span></p>
+        
+        </div>
+        
+      </div>
+      <h3>Recursive Method</h3>
+      <div class="algorithm">
+
+        <div style="mso-element:para-border-div;border:solid #D3DCE6 1.0pt;mso-border-alt:
+        solid #D3DCE6 .75pt;padding:12.0pt 12.0pt 12.0pt 12.0pt;background:#F2F2F2">
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span class="SpellE"><span class="GramE"><span style="font-size:10.5pt;font-family:Inconsolata;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;color:#948A54">binarySearch</span></span></span><span class="GramE"><span style="font-size:10.5pt;font-family:Inconsolata;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;color:#948A54">(</span></span><span class="SpellE"><span style="font-size:10.5pt;font-family:Inconsolata;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;color:#948A54">arr</span></span><span style="font-size:10.5pt;font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-font-family:&quot;Courier New&quot;;color:#948A54">, x, low, high)<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if low
+        &gt; high<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>return False <o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mid
+        = (low + high) / 2 <o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if x
+        == <span class="SpellE">arr</span>[mid]<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>return mid<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else
+        if x &gt; <span class="SpellE">arr</span>[<span class="GramE">mid]<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// x is on the right side<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>return <span class="SpellE"><span class="GramE">binarySearch</span></span><span class="GramE">(</span><span class="SpellE">arr</span>, x, mid + 1, high)<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>else<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>// x is on the right side<o:p></o:p></span></p>
+        
+        <p class="MsoNormal" style="margin-bottom:12.0pt;line-height:15.0pt;tab-stops:
+        45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+        background:#F2F2F2;border:none;mso-border-alt:solid #D3DCE6 .75pt;padding:0in;
+        mso-padding-alt:12.0pt 12.0pt 12.0pt 12.0pt"><span style="font-size:10.5pt;
+        font-family:Inconsolata;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+        &quot;Courier New&quot;;color:#948A54"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>return <span class="SpellE"><span class="GramE">binarySearch</span></span><span class="GramE">(</span><span class="SpellE">arr</span>, x, low, mid - 1)<o:p></o:p></span></p>
+        
+        </div>
+        
+      </div>
+      <br>
+      <h2 style="text-decoration:underline;">Binary Search Complexity</h2>
+      <ul>
+        <li>Best case complexity: O(1)</li>
+        <li>Average case complexity: O(log n)</li>
+        <li>Worst case complexity: O(log n)</li>
+      </ul>
+      <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+        <iframe width="100%" height="400"
+        src="https://www.youtube.com/embed/kleyhFIsU5E" frameborder="0" style="border-radius: 5px; text-align: center;">
+        </iframe>
+      </div>
+      <div class="topic">
+        <p>Another topic:</p>
+         <ol>
+            <li><a href="https://www.programiz.com/dsa/linear-search" target="_blank" >Linear Search</a></li>  
+        </ol>
+    </div>
+
+    <div class="problem">
+        <p style="text-align: center;">Problems</p>
+         <ul>
+            <li><a href="https://codeforces.com/problemset/problem/750/A" target="_blank">problem 1</a></li>
+            <li><a href="https://codeforces.com/problemset/problem/1419/D1" target="_blank">problem 2</a></li>
+        </ul>
+    </div>
+    <!-- <div class="next_lesson">
+        <div class="previous"><a href="controlflow1.html">&lt;&lt; previous</a></div>
+        <div class="next"><a href="controlflow3.html">next &gt;&gt;</a></div>
+    </div> -->
+    <div class="next_topic">
+        <div class="previous" style="visibility: hidden;  ><a href="intro_l1.html">&lt;&lt; previous</a></div>
+        <div class="mid">topic</div>
+        <div class="next"><a href="twopointer.html">next &gt;&gt;</a></div>
+    </div>
+</div>
+</div>
+<!-- end body -->
+<!-- footer -->
+<div class="footer">
+<div class="container">
+    <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+    <div class="icon">
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-telegram"></i></a>
+    </div>
+</div>
+</div>
+<!-- end footer -->
+    
+
+</body>  
