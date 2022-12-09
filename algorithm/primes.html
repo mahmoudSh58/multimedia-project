@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primes</title>  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+    <link rel="stylesheet" href="../css/algorithm/primes.css">
+ </head>
+  <body>   
+   <!-- header -->
+   <div class="header">
+    <div class="container">
+        <img src="../image/logo.svg" alt="logo">
+        <div class="links">
+            <ul>
+                <li>
+                    <span class="header-li">Basics</span>
+                    <ul>
+                        <li><a href="">Introduction</a></li>
+                        <li><a href="">Flow control</a></li>
+                        <li><a href="">Functions</a></li>
+                        <li><a href="">Arrays</a></li>
+                        <li><a href="">Pointers</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="header-li">Algorithms</span>
+                    <ul>
+                        <li><a href="">Binary search</a></li>
+                        <li><a href="">Two pointer</a></li>
+                        <li><a href="">primes</a></li>
+                        <li><a href="">Bitmask</a></li>
+                        <li><a href="">GCD&LCM</a></li>
+                        <li><a href="">Sort</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="header-li" >Problems</a></li>
+                <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+<!-- end header -->
+<!-- landing -->
+<div class="landing">
+<div class="container">
+    <div class="bio">
+        <h1 class="topic">Primes and Number Theory</h1>
+    </div>
+</div>
+</div>
+<!-- end landing -->
+<!-- body -->
+<div class="body">
+  <div class="container">
+ <p> <h2> Prime Number Program in C++ :</h2>
+  Prime number is a number that is greater than 1 and divided by 1 or itself. In other words,
+   prime numbers can't be divided by other numbers than itself or 1.<br>
+    For example 2, 3, 5, 7, 11, 13, 17, 19, 23.... are the prime numbers.
+  Let's see the prime number program in C++.<br>
+   In this C++ program, we will take an input from the user and check whether the number is prime or not.
+ </p>
+ <div class="code">
+
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span>#include &lt;<span class=SpellE>iostream</span>&gt;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+  mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>using</span></span><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> namespace <span class=SpellE>std</span>;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=SpellE><span class=GramE><span lang=EN-GB style='font-size:13.0pt;
+  font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+  color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+  mso-fareast-language:EN-GB'>int</span></span></span><span lang=EN-GB
+  style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> main()<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>{<span
+  style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>int</span></span>
+  n, i, m=0, flag=0;<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; &quot;Enter the Number to check Prime: &quot;;<span
+  style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cin</span></span>
+  &gt;&gt; n;<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span>m=n/2;<span style='mso-spacerun:yes'>
+  </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>for(</span>i = 2; i &lt;=
+  m; i++)<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span>{<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>if(</span>n % i ==
+  0)<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span>{<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>&lt;&lt;&quot;Number
+  is not Prime.&quot;&lt;&lt;<span class=SpellE>endl</span>;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>flag=</span>1;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>break</span>;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span>}<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span>}<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>if</span> (flag==0)<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; &quot;Number is Prime.&quot;&lt;&lt;<span class=SpellE>endl</span>;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+  
+  </div>
+  
+  <div class="code">
+
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span>Output:<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>Enter the Number to check
+    Prime: 17<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>Number is Prime.<span
+    style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>Enter the Number to check
+    Prime: 57<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>Number is not <span
+    class=GramE>Prime</span>.<span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+    </div>
+ <!--الفيديو-->
+ <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+  <iframe width="95%" height="400"
+  src="https://www.youtube.com/embed/dTiTocDcf9I" frameborder="0" style="border-radius: 5px; text-align: center;">
+  </iframe></div>
+ <!--كده خلصت ال primes-->
+
+ <h2>Sieve of Eratosthenes :</h2>
+ 
+ <h4>Given a number n, print all primes smaller than or equal to n. It is also given that n is a small number. </h4>
+ <h3>Example:</h3>
+ <div class="code">
+
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span><span class=GramE><b><u>Input :</u></b></span><b><u><o:p></o:p></u></b></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span>n = 10 <o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><b><u><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>Output:<o:p></o:p></span></u></b></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>2 3 5 7<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+  
+  </div>
+  <div class="code">
+
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><span class=GramE><b><u>Input :</u></b></span><b><u><o:p></o:p></u></b></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span>n = 20 <o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><b><u><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>Output:<o:p></o:p></span></u></b></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span>2 3 5 7 11 13 17 19<span
+    style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+ </div>
+ <p>The sieve of Eratosthenes is one of the most efficient ways to find all primes smaller than n when n is smaller than 10 million<br>
+  Following is the algorithm to find all the prime numbers less than or equal to a given integer n by the Eratosthene’s method: <br>
+  When the algorithm terminates, all the numbers in the list that are not marked are prime.
+  <h4>Explanation with Example:</h4> 
+  Let us take an example when n = 50. So we need to print all prime numbers smaller than or equal to 50. <br>
+  We create a list of all numbers from 2 to 50.
+  </p>
+  <div style="display:flex; justify-content: center;">
+    <img src="../image/sev1.png" alt="sort6_p7">
+</div>
+<p>According to the algorithm we will mark all the numbers which are divisible by 2 and are greater than or equal to the square of it. </p>
+<div style="display:flex; justify-content: center;">
+  <img src="../image/sev2.png" alt="sort6_p7">
+</div>
+<p> Now we move to our next unmarked number 3 and mark all the numbers which are multiples of 3 and are greater than or equal to the square of it.   
+  </p>
+<div style="display:flex; justify-content: center;">
+  <img src="../image/sev3.png" alt="sort6_p7">
+</div>
+<p>We move to our next unmarked number 5 and mark all multiples of 5 and are greater than or equal to the square of it. </p>
+<div style="display:flex; justify-content: center;">
+  <img src="../image/sev4.png" alt="sort6_p7">
+</div>
+<p>We continue this process and our final table will look like below:</p>
+<div style="display:flex; justify-content: center;">
+  <img src="../image/sev5.png" alt="sort6_p7">
+</div>
+<h4>So the prime numbers are the unmarked ones: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 . </h4>
+<p><h4>Implementation:</h4> 
+  Following is the implementation of the above algorithm. In the following implementation, a boolean array arr[] of size n is used to mark multiples of prime numbers. 
+  </p>
+  <div class="code">
+
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span>// C++ program to print all primes smaller
+    than or equal to<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>// n using Sieve of
+    Eratosthenes<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>#include &lt;bits/<span
+    class=SpellE>stdc</span>++.h&gt;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+    mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>using</span></span><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+    mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>void</span></span><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'> <span class=SpellE>SieveOfEratosthenes</span>(<span
+    class=SpellE>int</span> n)<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>{<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// Create a <span class=SpellE>boolean</span>
+    array &quot;<span class=GramE>prime[</span>0..n]&quot; and initialize<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// all entries it as true. A value in
+    prime[i] will<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// finally be false if i is Not a prime,
+    else true.<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>bool</span> prime[n + 1];<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>memset</span></span><span
+    class=GramE>(</span>prime, true, <span class=SpellE>sizeof</span>(prime));<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>for</span> (<span
+    class=SpellE>int</span> p = 2; p * p &lt;= n; p++) {<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// If prime[p] is not changed, then it
+    is a prime<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+    mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>if</span></span><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'> (prime[p] == true) {<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// Update all multiples of p
+    greater than or<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// equal to the square of it
+    numbers which are<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span
+    style='mso-spacerun:yes'></span>// multiple of p and are less than p^2
+    are<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// already been marked.<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>for</span> (<span
+    class=SpellE>int</span> i = p * p; i &lt;= n; i += p)<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>prime[</span>i]
+    = false;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>}<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>}<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>// Print all prime numbers<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>for</span> (<span
+    class=SpellE>int</span> p = 2; p &lt;= n; p++)<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'></span><span
+    class=GramE>if</span> (prime[p])<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+    &lt;&lt; p &lt;&lt; &quot; &quot;;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>// Driver Code<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=SpellE><span class=GramE><span lang=EN-GB style='font-size:13.0pt;
+    font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+    color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+    mso-fareast-language:EN-GB'>int</span></span></span><span lang=EN-GB
+    style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'> main()<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>{<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>int</span></span>
+    n = 30;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+    &lt;&lt; &quot;Following are the prime numbers smaller &quot;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span>&lt;&lt; &quot; than or equal to
+    &quot; &lt;&lt; n &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>SieveOfEratosthenes</span></span><span
+    class=GramE>(</span>n);<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+ </div>
+  <div class="code">
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+      style='mso-spacerun:yes'></span><span class=GramE><b><u>Output :</u></b></span><b><u>
+      <o:p></o:p></u></b></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+      style='mso-spacerun:yes'></span>2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59
+      61 67 71 73 79 83 89 97<o:p></o:p></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+      
+      <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+      
+ </div>
+
+ <!--الفيديووووو-->
+ 
+<div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+  <iframe width="95%" height="400"
+  src="https://www.youtube.com/embed/d9DEa0FHIC8" frameborder="0" style="border-radius: 5px; text-align: center;">
+  </iframe></div>
+
+ <h3> C++ Program to Display Factors of a Number :</h3>
+ <p>Factors are those numbers that are multiplied to get a number.
+ <h4> For example:</h4> 5 and 3 are factors of 15 as 5*3=15.<br>
+  Similarly other factors of 15 are 1 and 15 as 15*1=15.<br>
+  The program to display the factors of a number are given as follows.</p>
+<h4> Example :</h4>
+ <div class="code">
+
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span>#include&lt;<span class=SpellE>iostream</span>&gt;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+  mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>using</span></span><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=SpellE><span class=GramE><span lang=EN-GB style='font-size:13.0pt;
+  font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+  color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+  mso-fareast-language:EN-GB'>int</span></span></span><span lang=EN-GB
+  style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> main() {<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>int</span></span>
+  <span class=SpellE>num</span> = 20, i;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; &quot;The factors of &quot; &lt;&lt; <span class=SpellE>num</span>
+  &lt;&lt; &quot; are : &quot;;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>for(</span>i=1; i &lt;= <span
+  class=SpellE>num</span>; i++) {<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>if</span> (<span
+  class=SpellE>num</span> % i == 0)<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; i &lt;&lt; &quot; &quot;;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span>}<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+  
+  </div>
+  <div class="code">
+
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><b><u>Output:<o:p></o:p></u></b></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><b><u><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p><span style='text-decoration:
+     none'>&nbsp;</span></o:p></span></u></b></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>The factors of 20 <span
+    class=GramE>are :</span> 1 2 4 5 10 20<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+  </div>
+ <h5> In the above program, the for loop runs from 1 to num. The number is divided by i and <br>
+    if the remainder is 0, then i is a factor of num and is printed.
+ </h5>
+ <div class="code">
+ <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+ 14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+      style='mso-spacerun:yes'></span><span class=GramE>for(</span>i=1; i &lt;= <span
+      class=SpellE>num</span>; i++) {<o:p></o:p></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+      style='mso-spacerun:yes'> </span><span class=GramE>if</span> (<span
+      class=SpellE>num</span> % i == 0)<o:p></o:p></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+      style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+      &lt;&lt; i &lt;&lt; &quot; &quot;;<o:p></o:p></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<b><u><o:p></o:p></u></b></span></p>
+      
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+      lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+      "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+      letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+      <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>     
+ </div>
+
+ <p> The same program given above can be created using a function that calculates all the factors of the number. 
+  This is given as follows −</p>
+ <h3>Example:</h3>
+ <div class="code">
+
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span>#include&lt;<span class=SpellE>iostream</span>&gt;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+  mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>using</span></span><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+  mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>void</span></span><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> factors(<span class=SpellE>int</span>
+  <span class=SpellE>num</span>) {<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>int</span></span>
+  i;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>for(</span>i=1; i &lt;= <span
+  class=SpellE>num</span>; i++) {<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>if</span> (<span
+  class=SpellE>num</span> % i == 0)<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; i &lt;&lt; &quot; &quot;;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span>}<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  class=SpellE><span class=GramE><span lang=EN-GB style='font-size:13.0pt;
+  font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+  color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+  mso-fareast-language:EN-GB'>int</span></span></span><span lang=EN-GB
+  style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'> main() {<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>int</span></span>
+  <span class=SpellE>num</span> = 25;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; &quot;The factors of &quot; &lt;&lt; <span class=SpellE>num</span>
+  &lt;&lt; &quot; are : &quot;;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>factors(</span><span
+  class=SpellE>num</span>);<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<b><u><o:p></o:p></u></b></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+  
+  </div>
+
+  <div class="code">
+
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+    style='mso-spacerun:yes'></span><b><u>Output:<o:p></o:p></u></b></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'>The factors of 25 <span
+    class=GramE>are :</span> 1 5 25<b><u><o:p></o:p></u></b></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+    letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+  </div>
+    
+ <p><h4>In the above program,</h4> the function factors() finds all the factors of “num”. It is called from the main() function with one parameter i.e. “num”.
+  factors(num);<br>
+  The for loop in the function factors() runs from 1 to num. The number is divided by i and if the remainder is 0,
+   then i is a factor of “num” and is printed.
+ </p>
+ <div class="code">
+
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'></span><span class=GramE>for(</span>i=1; i &lt;= <span
+  class=SpellE>num</span>; i++) {<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=GramE>if</span> (<span
+  class=SpellE>num</span> % i == 0)<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+  style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+  &lt;&lt; i &lt;&lt; &quot; &quot;;<o:p></o:p></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;tab-stops:410.1pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'>}<b><u><o:p></o:p></u></b></span></p>
+  
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+  lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+  letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  
+  <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+  
+  </div>
+  <!--الفيديووو-->
+
+  <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+    <iframe width="95%" height="400"
+    src="https://www.youtube.com/embed/fdE_CEk9X2g" frameborder="0" style="border-radius: 5px; text-align: center;">
+    </iframe></div>
+
+
+<div class="problem">
+  <p style="text-align: center;">Problems</p>
+   <ul>
+      <li><a href="https://www.geeksforgeeks.org/check-if-n-is-a-factorial-prime/" target="_blank">problem 1</a></li>
+      <li><a href="https://www.geeksforgeeks.org/c-program-to-check-prime-number/" target="_blank">problem 2</a></li>
+  </ul>
+</div>
+
+
+<div class="next_topic">
+  <div class="previous"><a href="">&lt;&lt; previous</a></div>
+  <div class="mid">topic</div>
+  <div class="next"><a href="">next &gt;&gt;</a></div>
+</div>
+ </div>
+  </div>
+  <!-- footer -->
+ <div class="footer">
+  <div class="container">
+ <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+  <div class="icon">
+  <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+ <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+ <a href=""><i class="fa-brands fa-youtube"></i></a>
+ <a href=""><i class="fa-brands fa-github"></i></a>
+  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+  <a href=""><i class="fa-brands fa-telegram"></i></a>
+  </div>
+  </div>
+ </div>
+  <!-- end footer -->
+ </div>
+</body>
+</html>
