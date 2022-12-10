@@ -153,7 +153,7 @@ body {
 /* landing */
 .landing .container {
    background-color: #fc3;
-    height: calc(100vh - 60px);
+    height: calc(70vh - 60px);
     position: relative;
     width: 100%;
 }
