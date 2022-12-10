@@ -62,7 +62,7 @@ body {
     background-color: #f6f6f6;
     right: 0;
     min-width: 200px;
-    top: calc(100% + 15px);
+    top: calc(100% + 5px);
     display: none;
     z-index: 100;
 }
@@ -71,6 +71,14 @@ body {
     transform: translateY(-4px);
     transition: transform 0.2s;
     color: #dfa700;
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
 }
 
 .header .links ul li:first-child:hover ul,
@@ -89,6 +97,18 @@ body {
     top: -20px;
     position: absolute;
 }
+
+.header .links ul li:first-child ul::after,
+.header .links ul li:nth-child(2) ul::after {
+    width: 100%;
+    height: 36px;
+    background-color: transparent;
+    content: ' ';
+    right: 0;
+    top: -35px;
+    position: absolute;
+}
+
 
 .header .links ul li:first-child ul li,
 .header .links ul li:nth-child(2) ul li {
