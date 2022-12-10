@@ -1,0 +1,1060 @@
+
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- end font  -->
+    <link rel="stylesheet" href="../css/basics/string.css">
+ </head>
+  <body>   
+   <!-- header -->
+   <div class="header">
+    <div class="container">
+        <img src="../image/logo.svg" alt="logo">
+        <div class="links">
+            <ul>
+                <li>
+                    <span class="header-li">Basics</span>
+                    <ul>
+                        <li><a href="">Introduction</a></li>
+                        <li><a href="">Flow control</a></li>
+                        <li><a href="">Functions</a></li>
+                        <li><a href="">Arrays</a></li>
+                        <li><a href="">Pointers</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="header-li">Algorithms</span>
+                    <ul>
+                        <li><a href="">Binary search</a></li>
+                        <li><a href="">Two pointer</a></li>
+                        <li><a href="">primes</a></li>
+                        <li><a href="">Bitmask</a></li>
+                        <li><a href="">GCD&LCM</a></li>
+                        <li><a href="">Sort</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="header-li" >Problems</a></li>
+                <li><a href="https://ideone.com/" class="header-li" title="https://ideone.com/" target="_blank">compiler</a></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+<!-- end header -->
+<!-- landing -->
+<div class="landing">
+<div class="container">
+    <div class="bio">
+        <h1 class="topic">strings: </h1>
+    </div>
+</div>
+</div>
+<!-- end landing -->
+<!-- body -->
+<div class="body">
+  <div class="container">
+    <h1>C++strings :</h1>
+    <p> you'll learn to handle strings in C++. You'll learn to declare them, initialize them and use them for various input/output operations.
+        String is a collection of characters. There are two types of strings commonly used in C++ programming language:
+      <ol>	
+        <li>Strings that are objects of string class (The Standard C++ Library string class)</li>
+        <li>C-strings (C-style Strings)</li>
+      </ol>
+        
+      C-strings :
+        In C programming, the collection of characters is stored in the form of arrays. This is also supported in C++ programming. Hence it's called C-strings.
+        C-strings are arrays of type char terminated with null character, that is, \0 (ASCII value of null character is 0).
+    </p>
+   <h3> How to define a C-string?</h3>
+    <div class="code">
+
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        normal;background:#EEECE1;mso-background-themecolor:background2;vertical-align:
+        baseline'><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+        mso-fareast-font-family:"Times New Roman";color:#273239;letter-spacing:.1pt;
+        mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+        "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+        letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+        style='mso-spacerun:yes'> </span>char <span class=SpellE>str</span>[] =
+        &quot;C++&quot;;</span><span lang=EN-GB style='font-size:10.5pt;font-family:
+        Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+        color:black'><o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+        
+    </div>
+    
+    <p>In the above code, str is a string and it holds 4 characters.
+    Although, "C++" has 3 character, the null character \0 is added to the end of the string automatically.
+    </p>
+    <h3>Alternative ways of defining a string</h3>
+    
+    <div class="code">
+
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        normal;background:#EEECE1;mso-background-themecolor:background2;vertical-align:
+        baseline'><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+        mso-fareast-font-family:"Times New Roman";color:#273239;letter-spacing:.1pt;
+        mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+        "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+        letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+        style='mso-spacerun:yes'> </span><span class=GramE>char</span> <span
+        class=SpellE>str</span>[4] = &quot;C++&quot;;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+        "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+        letter-spacing:.1pt;mso-fareast-language:EN-GB'><span
+        style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+        mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+        mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>char</span></span><span
+        lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+        "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+        letter-spacing:.1pt;mso-fareast-language:EN-GB'> <span class=SpellE>str</span>[]
+        = {'C','+','+','\0'};<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+        "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+        letter-spacing:.1pt;mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        class=GramE><span lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";
+        mso-fareast-font-family:"Times New Roman";color:#4F6228;mso-themecolor:accent3;
+        mso-themeshade:128;letter-spacing:.1pt;mso-fareast-language:EN-GB'>char</span></span><span
+        lang=EN-GB style='font-size:13.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+        "Times New Roman";color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;
+        letter-spacing:.1pt;mso-fareast-language:EN-GB'> <span class=SpellE>str</span>[4]
+        = {'C','+','+','\0'};</span><span lang=EN-GB style='font-size:10.5pt;
+        font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+        "Times New Roman";color:black'><o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+        
+        </div>
+
+ <p>Like arrays, it is not necessary to use all the space allocated for the string. </p>
+ <h3>For example:</h3>
+ <div class="code">
+
+    <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+    font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+    color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+    mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>char <span
+    class=SpellE>str</span>[100] = &quot;C++&quot;;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+ </div>
+    <h3>Example 1: </h3><h4> C++ String to read a word</h4>
+    <p>C++ program to display a string entered by user.</p> 
+
+    <div class="code">
+
+        <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+        font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+        color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+        mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'></span>#include &lt;<span class=SpellE>iostream</span>&gt;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+        mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+        color:black'>using</span></span><span lang=EN-GB style='font-size:10.5pt;
+        font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+        "Times New Roman";color:black'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        class=SpellE><span class=GramE><span lang=EN-GB style='font-size:10.5pt;
+        font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+        "Times New Roman";color:black'>int</span></span></span><span lang=EN-GB
+        style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman";color:black'> main()<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>{<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=GramE>char</span> <span
+        class=SpellE>str</span>[100];<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+        &lt;&lt; &quot;Enter a string: &quot;;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cin</span></span>
+        &gt;&gt; <span class=SpellE>str</span>;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+        &lt;&lt; &quot;You entered: &quot; &lt;&lt; <span class=SpellE>str</span>
+        &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+        &lt;&lt; &quot;\<span class=SpellE>nEnter</span> another string: &quot;;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cin</span></span>
+        &gt;&gt; <span class=SpellE>str</span>;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+        &lt;&lt; &quot;You entered: &quot;&lt;&lt;<span class=SpellE>str</span>&lt;&lt;<span
+        class=SpellE>endl</span>;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>}<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+        
+    </div>
+
+    <div class="code">
+
+        <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+        font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+        color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+        mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'></span></span><b><u><span lang=EN-GB
+        style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman";color:#95B3D7;mso-themecolor:accent1;
+        mso-themetint:153;mso-style-textfill-fill-color:#95B3D7;mso-style-textfill-fill-themecolor:
+        accent1;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+        "lumm=60000 lumo=40000"'>Output:</span></u></b><b><u><span lang=EN-GB
+        style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman";color:black'><o:p></o:p></span></u></b></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>Enter a
+        string: C++<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>You
+        entered: C++<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>Enter
+        another string: Programming is fun.<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>You
+        entered: Programming<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+        
+    </div>
+
+    <p>Notice that, in the second example only "Programming" is displayed instead of "Programming is fun".
+      <br>  This is because the extraction operator >> works as scanf() in C and considers a space " " has a terminating character.  
+        
+     <h3>Example 2:</h3>
+     <h4> C++ String to read a line of text</h4>
+     C++ program to read and display an entire line entered by user.
+   </p>
+        
+   <div class="code">
+
+    <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+    font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+    color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+    mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'></span>#include &lt;<span class=SpellE>iostream</span>&gt;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+    mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+    color:black'>using</span></span><span lang=EN-GB style='font-size:10.5pt;
+    font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+    "Times New Roman";color:black'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=SpellE><span class=GramE><span lang=EN-GB style='font-size:10.5pt;
+    font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+    "Times New Roman";color:black'>int</span></span></span><span lang=EN-GB
+    style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+    mso-bidi-font-family:"Times New Roman";color:black'> main()<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>{<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>char</span> <span
+    class=SpellE>str</span>[100];<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+    &lt;&lt; &quot;Enter a string: &quot;;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cin.get</span></span><span
+    class=GramE>(</span><span class=SpellE>str</span>, 100);<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+    &lt;&lt; &quot;You entered: &quot; &lt;&lt; <span class=SpellE>str</span>
+    &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>}<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+    </div>
+        
+  <div class="code">
+
+        <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+        font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+        color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+        mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'></span></span><b><u><span lang=EN-GB
+        style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman";color:#95B3D7;mso-themecolor:accent1;
+        mso-themetint:153;mso-style-textfill-fill-color:#95B3D7;mso-style-textfill-fill-themecolor:
+        accent1;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+        "lumm=60000 lumo=40000"'>Output:</span></u></b><b><u><span lang=EN-GB
+        style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman";color:black'><o:p></o:p></span></u></b></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'></span>Enter a string: Programming is fun.<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>You
+        entered: Programming is fun.<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+        
+  </div>
+
+ <p> To read the text containing blank space, cin.get function can be used.<br>
+     This function takes two arguments.<br>
+     First argument is the name of the string (address of first element of string) and second argument is the maximum size of the array.<br>
+     In the above program, str is the name of the string and 100 is the maximum size of the array.
+   
+   <h2>string Object</h2>
+   In C++, you can also create a string object for holding strings.<br>
+    Unlike using char arrays, string objects has no fixed length, <br>
+    and can be extended as per your requirement.
+   
+   <h3>Example 3: </h3><h4>C++ string using string data type</h4>
+ </p>
+ <div class="code">
+
+    <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+    font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+    color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+    mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'></span>#include &lt;<span class=SpellE>iostream</span>&gt;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+    mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+    color:black'>using</span></span><span lang=EN-GB style='font-size:10.5pt;
+    font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+    "Times New Roman";color:black'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    class=SpellE><span class=GramE><span lang=EN-GB style='font-size:10.5pt;
+    font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+    "Times New Roman";color:black'>int</span></span></span><span lang=EN-GB
+    style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+    mso-bidi-font-family:"Times New Roman";color:black'> main()<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>{<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span>// <span class=GramE>Declaring</span> a
+    string object<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>string</span> <span
+    class=SpellE>str</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+    &lt;&lt; &quot;Enter a string: &quot;;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>getline</span></span><span
+    class=GramE>(</span><span class=SpellE>cin</span>, <span class=SpellE>str</span>);<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+    &lt;&lt; &quot;You entered: &quot; &lt;&lt; <span class=SpellE>str</span>
+    &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>}<b><u><o:p></o:p></u></b></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+    </div>
+
+  <div class="code">
+
+        <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+        font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+        color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+        mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+        style='mso-spacerun:yes'></span></span><b><u><span lang=EN-GB
+        style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman";color:#95B3D7;mso-themecolor:accent1;
+        mso-themetint:153;mso-style-textfill-fill-color:#95B3D7;mso-style-textfill-fill-themecolor:
+        accent1;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+        "lumm=60000 lumo=40000"'>Output:</span></u></b><span lang=EN-GB
+        style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+        mso-bidi-font-family:"Times New Roman"'> <b><u><span style='color:#95B3D7;
+        mso-themecolor:accent1;mso-themetint:153;mso-style-textfill-fill-color:#95B3D7;
+        mso-style-textfill-fill-themecolor:accent1;mso-style-textfill-fill-alpha:100.0%;
+        mso-style-textfill-fill-colortransforms:"lumm=60000 lumo=40000"'><o:p></o:p></span></u></b></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman"'>Enter a string:
+        Programming is fun.<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman"'>You entered:
+        Programming is fun.<o:p></o:p></span></p>
+        
+        <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+        lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+        "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+        
+        <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+        
+  </div>
+ <h4>In this program, a string str is declared.</h4>
+  <p>Then the string is asked from the user. </p>
+  <p>Instead of using cin>> or cin.get() function, you can get the entered line of text<br>
+     using getline().<br>
+    getline() function takes the input stream as the first parameter which is cin and str as the location of the line to be stored.
+   
+   <h2>Passing String to a Function</h2>
+   Strings are passed to a function in a similar way arrays are passed to a function.</p>
+
+   <div class="code">
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'></span>#include &lt;<span class=SpellE>iostream</span>&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black'>using</span></span><span lang=EN-GB style='font-size:10.5pt;
+font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black'> namespace <span class=SpellE>std</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black'>void</span></span><span lang=EN-GB style='font-size:10.5pt;
+font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black'> display(char *);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black'>void</span></span><span lang=EN-GB style='font-size:10.5pt;
+font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black'> display(string);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+class=SpellE><span class=GramE><span lang=EN-GB style='font-size:10.5pt;
+font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black'>int</span></span></span><span lang=EN-GB
+style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";color:black'> main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=GramE>string</span> str1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=GramE>char</span> <span
+class=SpellE>str</span>[100];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+&lt;&lt; &quot;Enter a string: &quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>getline</span></span><span
+class=GramE>(</span><span class=SpellE>cin</span>, str1);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+&lt;&lt; &quot;Enter another string: &quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cin.get</span></span><span
+class=GramE>(</span><span class=SpellE>str</span>, 100, '\n');<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=GramE>display(</span>str1);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=GramE>display(</span><span
+class=SpellE>str</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black'>void</span></span><span lang=EN-GB style='font-size:10.5pt;
+font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black'> display(char s[])<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+&lt;&lt; &quot;Entered char array is: &quot; &lt;&lt; s &lt;&lt; <span
+class=SpellE>endl</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+class=GramE><span lang=EN-GB style='font-size:10.5pt;font-family:Consolas;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black'>void</span></span><span lang=EN-GB style='font-size:10.5pt;
+font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black'> display(string s)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>cout</span></span>
+&lt;&lt; &quot;Entered string is: &quot; &lt;&lt; s &lt;&lt; <span
+class=SpellE>endl</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>}</span><span
+lang=EN-GB style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:#95B3D7;
+mso-themecolor:accent1;mso-themetint:153;mso-style-textfill-fill-color:#95B3D7;
+mso-style-textfill-fill-themecolor:accent1;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:"lumm=60000 lumo=40000"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+  </div>
+  <div class="code">
+
+    <p class=MsoNormal><span lang=EN-GB style='font-size:13.0pt;line-height:115%;
+    font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+    color:#4F6228;mso-themecolor:accent3;mso-themeshade:128;letter-spacing:.1pt;
+    mso-fareast-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'></span></span><b><u><span lang=EN-GB
+    style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+    mso-bidi-font-family:"Times New Roman";color:#8EB4E3;mso-themecolor:text2;
+    mso-themetint:102;mso-style-textfill-fill-color:#8EB4E3;mso-style-textfill-fill-themecolor:
+    text2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+    "lumm=40000 lumo=60000"'>Output:</span></u></b><b><u><span lang=EN-GB
+    style='font-size:14.0pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+    mso-bidi-font-family:"Times New Roman";color:black'><o:p></o:p></span></u></b></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><span
+    style='mso-spacerun:yes'></span>Enter a string:<span
+    style='mso-spacerun:yes'> </span>Programming is fun.<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>Enter
+    another string:<span style='mso-spacerun:yes'> </span>Really?<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>Entered
+    string is: Programming is fun.<o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'>Entered
+    char array is: Really?</span><span lang=EN-GB style='font-size:14.0pt;
+    font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+    "Times New Roman";color:#95B3D7;mso-themecolor:accent1;mso-themetint:153;
+    mso-style-textfill-fill-color:#95B3D7;mso-style-textfill-fill-themecolor:accent1;
+    mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+    "lumm=60000 lumo=40000"'><o:p></o:p></span></p>
+    
+    <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    14.25pt;background:#EEECE1;mso-background-themecolor:background2'><span
+    lang=EN-GB style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+    "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+    
+    <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+    
+    </div>
+    
+    <h4>In the above program,</h4> two strings are asked to enter. These are stored in str and str1 respectively, where str is a char array and str1 is a string object.<br>
+    Then, we have two functions display() that outputs the string onto the string.<br>
+    The only difference between the two functions is the parameter.<br> The first display() function takes char array as a parameter, while the second takes string as a parameter.
+ <h4>This process is known as function overloading. </h4>  
+   
+
+ <!--الفيديووو-->
+
+ <div style="display:flex;align-items: center;justify-content: center;padding: 24px;">
+    <iframe width="95%" height="400"
+    src="https://www.youtube.com/embed/HOB-Ey3tEqY" frameborder="0" style="border-radius: 5px; text-align: center;">
+    </iframe></div>
+
+
+
+ </div>
+  <!-- footer -->
+ <div class="footer">
+  <div class="container">
+ <p>By MEM's Team <sub style="font-size:7px;">2022/2023</sub></p>
+  <div class="icon">
+  <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+ <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+ <a href=""><i class="fa-brands fa-youtube"></i></a>
+ <a href=""><i class="fa-brands fa-github"></i></a>
+  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+  <a href=""><i class="fa-brands fa-telegram"></i></a>
+  </div>
+  </div>
+ </div>
+  <!-- end footer -->
+</div>
+</body>
+</html>
