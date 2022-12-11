@@ -29,6 +29,10 @@ body {
     width: calc(189% + 1.3px);
     height: 180px;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1670688868 .shape-fill {
@@ -262,6 +266,7 @@ body {
 
     .wave {
         width: 992px;
+        margin-top: -1px;
     }
 
 }
