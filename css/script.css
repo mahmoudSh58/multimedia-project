@@ -261,7 +261,7 @@ body {
     }
 
     .body .container {
-        height: calc(137vh + 40px);
+        height: calc(137vh + 70px);
     }
 
     .wave {
