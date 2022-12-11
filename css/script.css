@@ -257,7 +257,11 @@ body {
     }
 
     .body .container {
-        height: calc(137vh - 60px);
+        height: calc(137vh);
+    }
+
+    .wave {
+        width: 992px;
     }
 
 }
