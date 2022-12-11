@@ -261,12 +261,12 @@ body {
     }
 
     .body .container {
-        height: calc(137vh);
+        height: calc(137vh + 40px);
     }
 
     .wave {
         width: 992px;
-        margin-top: -1px;
+        margin-top: -3px;
     }
 
 }
